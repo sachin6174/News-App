@@ -24,7 +24,7 @@ final class DataStoreManager {
     
     // MARK: - Persistent Container
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "AppDatabase")
+        let container = NSPersistentContainer(name: "News_App")
         
         guard let baseDirectory = try? PathUtility.appDatabaseDirectory() else {
             Logger.error("Unable to resolve base database directory.")
@@ -34,7 +34,7 @@ final class DataStoreManager {
         let dbDirectory = baseDirectory.appendingPathComponent("Storage")
         createDirectoryIfNeeded(at: dbDirectory)
         
-        let storeURL = dbDirectory.appendingPathComponent("AppDatabase.sqlite")
+        let storeURL = dbDirectory.appendingPathComponent("News_App.sqlite")
         let description = NSPersistentStoreDescription(url: storeURL)
         description.shouldMigrateStoreAutomatically = true
         description.shouldInferMappingModelAutomatically = true
@@ -172,6 +172,55 @@ final class DataStoreManager {
             }
         } completion: { success in
             completion?(success)
+        }
+    }
+
+    // MARK: - Bookmark Operations
+    func saveBookmark(for article: Article) {
+        let context = mainContext
+        let bookmark = create(NewsArticleTable.self, in: context)
+
+        bookmark.uuid = UUID()
+        bookmark.heading = article.title
+        bookmark.descriptionData = article.description
+        bookmark.imageURL = article.urlToImage
+        bookmark.dateInfo = DateFormatter().date(from: article.publishedAt) ?? Date()
+        bookmark.isABookMark = true
+
+        saveContext()
+    }
+
+    func removeBookmark(for article: Article) {
+        let context = mainContext
+        let predicate = NSPredicate(format: "heading == %@", article.title)
+        let bookmarks = fetch(NewsArticleTable.self, predicate: predicate, in: context)
+
+        for bookmark in bookmarks {
+            delete(bookmark, in: context)
+        }
+
+        saveContext()
+    }
+
+    func fetchBookmarkedArticles() -> [Article] {
+        let context = mainContext
+        let predicate = NSPredicate(format: "isABookMark == %@", NSNumber(value: true))
+        let bookmarks = fetch(NewsArticleTable.self, predicate: predicate, in: context)
+
+        return bookmarks.compactMap { bookmark in
+            guard let title = bookmark.heading else { return nil }
+
+            let source = Source(id: nil, name: "Bookmarked")
+            return Article(
+                source: source,
+                author: nil,
+                title: title,
+                description: bookmark.descriptionData,
+                url: "",
+                urlToImage: bookmark.imageURL,
+                publishedAt: DateFormatter().string(from: bookmark.dateInfo ?? Date()),
+                content: nil
+            )
         }
     }
     
