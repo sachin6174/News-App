@@ -13,7 +13,6 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private let viewModel = NewsViewModel()
-    private let dataStoreManager = DataStoreManager.shared
     private let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
