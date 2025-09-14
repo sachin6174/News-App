@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class NewsTableViewCell: UITableViewCell {
     static let identifier = "NewsTableViewCell"
@@ -44,14 +43,18 @@ class NewsTableViewCell: UITableViewCell {
     func configure(with article: Article, isBookmarked: Bool = false) {
         self.article = article
         titleLabel.text = article.title
-        descriptionLabel.text = article.description ?? "No description available"
+        if let author = article.author, !author.isEmpty {
+            if let desc = article.description, !desc.isEmpty {
+                descriptionLabel.text = "By \(author)\n\(desc)"
+            } else {
+                descriptionLabel.text = "By \(author)"
+            }
+        } else {
+            descriptionLabel.text = article.description ?? "No description available"
+        }
         bookmarkButton.isSelected = isBookmarked
 
-        if let imageURL = article.urlToImage, let url = URL(string: imageURL) {
-            newsImageView.sd_setImage(with: url, placeholderImage: UIImage(systemName: "photo"))
-        } else {
-            newsImageView.image = UIImage(systemName: "photo")
-        }
+        ImageLoader.shared.load(article.urlToImage, into: newsImageView)
     }
 
     @IBAction func bookmarkButtonTapped(_ sender: UIButton) {

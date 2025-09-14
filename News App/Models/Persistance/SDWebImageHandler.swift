@@ -4,7 +4,7 @@
 //
 //  Created by sachin kumar on 15/09/25.
 //
-import SDWebImage
+import UIKit
 
 class SDWebImageHandler {
     

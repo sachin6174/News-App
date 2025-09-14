@@ -12,17 +12,18 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
 
-    private var allArticles: [Article] = []
-    private var bookmarkedArticles: [Article] = []
-    private var currentArticles: [Article] = []
-
+    private let viewModel = NewsViewModel()
     private let dataStoreManager = DataStoreManager.shared
+    private let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupTableView()
-        fetchNews()
-        loadBookmarkedArticles()
+        bindViewModel()
+        configureSearch()
+        configureRefreshControl()
+        viewModel.loadBookmarks()
+        viewModel.fetchNews()
     }
 
     private func setupUI() {
@@ -44,44 +45,30 @@ class NewsViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: NewsTableViewCell.identifier)
     }
 
-    private func fetchNews() {
-        APIService.shared.request(
-            endpoint: AppConstants.baseURL,
-            queryItems: [
-                URLQueryItem(name: "country", value: "us"),
-                URLQueryItem(name: "category", value: "business")
-            ],
-            responseType: NewsResponse.self
-        ) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let response):
-                    self?.allArticles = response.articles
-                    self?.updateCurrentArticles()
-                case .failure(let error):
-                    self?.showError(error.localizedDescription)
-                }
-            }
+    private func bindViewModel() {
+        viewModel.onChange = { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 
-    private func loadBookmarkedArticles() {
-        bookmarkedArticles = dataStoreManager.fetchBookmarkedArticles()
-        if segmentedControl.selectedSegmentIndex == 1 {
-            updateCurrentArticles()
-        }
+    private func configureSearch() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search articles"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
 
-    private func updateCurrentArticles() {
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            currentArticles = allArticles
-        case 1:
-            currentArticles = bookmarkedArticles
-        default:
-            break
+    private func configureRefreshControl() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
+        tableView.refreshControl = refresh
+    }
+
+    @objc private func refreshPulled() {
+        viewModel.refresh { [weak self] _ in
+            self?.tableView.refreshControl?.endRefreshing()
         }
-        tableView.reloadData()
     }
 
     private func showError(_ message: String) {
@@ -91,28 +78,22 @@ class NewsViewController: UIViewController {
     }
 
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
-        updateCurrentArticles()
+        viewModel.mode = sender.selectedSegmentIndex == 0 ? .all : .bookmarks
+        viewModel.onChange?()
     }
 
     private func toggleBookmark(for article: Article) {
-        if isArticleBookmarked(article) {
-            dataStoreManager.removeBookmark(for: article)
-            bookmarkedArticles.removeAll { $0.url == article.url }
-        } else {
-            dataStoreManager.saveBookmark(for: article)
-            bookmarkedArticles.append(article)
-        }
-        updateCurrentArticles()
+        viewModel.toggleBookmark(for: article)
     }
 
     private func isArticleBookmarked(_ article: Article) -> Bool {
-        return bookmarkedArticles.contains { $0.url == article.url }
+        return viewModel.isBookmarked(article)
     }
 }
 
 extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentArticles.count
+        return viewModel.displayedArticles.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,8 +101,8 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        let article = currentArticles[indexPath.row]
-        let isBookmarked = isArticleBookmarked(article)
+        let article = viewModel.displayedArticles[indexPath.row]
+        let isBookmarked = viewModel.isBookmarked(article)
 
         cell.configure(with: article, isBookmarked: isBookmarked)
         cell.bookmarkTapped = { [weak self] article in
@@ -133,10 +114,16 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let article = currentArticles[indexPath.row]
+        let article = viewModel.displayedArticles[indexPath.row]
 
         if let url = URL(string: article.url) {
             UIApplication.shared.open(url)
         }
+    }
+}
+
+extension NewsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        viewModel.filterText = searchController.searchBar.text ?? ""
     }
 }
