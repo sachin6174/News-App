@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let newsVC = NewsViewController()
+        let newsVC = NewsViewController(nibName: "NewsViewController", bundle: nil)
         let navController = UINavigationController(rootViewController: newsVC)
 
         addChild(navController)
@@ -22,4 +22,3 @@ class ViewController: UIViewController {
         navController.didMove(toParent: self)
     }
 }
-
