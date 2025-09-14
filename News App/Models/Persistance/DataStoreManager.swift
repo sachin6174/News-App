@@ -132,7 +132,50 @@ final class DataStoreManager {
             return []
         }
     }
-    
+
+    // MARK: - Article Cache (non-bookmark)
+    func replaceCachedArticles(with articles: [Article]) {
+        performBackgroundTask { context in
+            // Remove old cache entries (non-bookmarks)
+            let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: NewsArticleTable.self))
+            fetch.predicate = NSPredicate(format: "isABookMark == NO")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetch)
+            _ = try? context.execute(deleteRequest)
+
+            // Insert fresh ones
+            for a in articles {
+                let item: NewsArticleTable = self.create(NewsArticleTable.self, in: context)
+                item.uuid = UUID()
+                item.heading = a.title
+                item.descriptionData = a.description
+                item.imageURL = a.urlToImage
+                item.dateInfo = Self.date(from: a.publishedAt)
+                item.isABookMark = false
+            }
+        }
+    }
+
+    func fetchCachedArticles() -> [Article] {
+        let predicate = NSPredicate(format: "isABookMark == NO")
+        let sort = [NSSortDescriptor(key: "dateInfo", ascending: false)]
+        let items = fetch(NewsArticleTable.self, predicate: predicate, sort: sort, in: mainContext)
+        return items.compactMap { row in
+            Article(
+                source: Source(id: nil, name: "Cached"),
+                author: nil,
+                title: row.heading ?? "",
+                description: row.descriptionData,
+                url: "", // no URL stored for offline cache
+                urlToImage: row.imageURL,
+                publishedAt: {
+                    if let d = row.dateInfo { return Self.string(from: d) }
+                    return ""
+                }(),
+                content: nil
+            )
+        }
+    }
+
     func count<T: NSManagedObject>(
         _: T.Type,
         predicate: NSPredicate? = nil,
@@ -184,7 +227,7 @@ final class DataStoreManager {
         bookmark.heading = article.title
         bookmark.descriptionData = article.description
         bookmark.imageURL = article.urlToImage
-        bookmark.dateInfo = DateFormatter().date(from: article.publishedAt) ?? Date()
+        bookmark.dateInfo = Self.date(from: article.publishedAt) ?? Date()
         bookmark.isABookMark = true
 
         saveContext()
@@ -218,7 +261,10 @@ final class DataStoreManager {
                 description: bookmark.descriptionData,
                 url: "",
                 urlToImage: bookmark.imageURL,
-                publishedAt: DateFormatter().string(from: bookmark.dateInfo ?? Date()),
+                publishedAt: {
+                    if let d = bookmark.dateInfo { return Self.string(from: d) }
+                    return ""
+                }(),
                 content: nil
             )
         }
@@ -265,5 +311,27 @@ enum PathUtility {
                                     appropriateFor: nil,
                                     create: true)
         return supportDir.appendingPathComponent("AppData")
+    }
+}
+
+// MARK: - Date formatting
+extension DataStoreManager {
+    static let iso8601: ISO8601DateFormatter = {
+        let f = ISO8601DateFormatter()
+        f.formatOptions = [.withInternetDateTime]
+        return f
+    }()
+    static let iso8601Frac: ISO8601DateFormatter = {
+        let f = ISO8601DateFormatter()
+        f.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return f
+    }()
+    static func date(from isoString: String) -> Date? {
+        if let d = iso8601.date(from: isoString) { return d }
+        if let d = iso8601Frac.date(from: isoString) { return d }
+        return nil
+    }
+    static func string(from date: Date) -> String {
+        iso8601.string(from: date)
     }
 }
