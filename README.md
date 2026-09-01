@@ -195,11 +195,12 @@ manifests, XCTest metrics, a leak report, environment details, and a running-app
 screenshot are committed under [docs/evidence](docs/evidence). See the exact,
 non-inflated results in [docs/evidence/VERIFICATION.md](docs/evidence/VERIFICATION.md).
 
-GitHub-hosted Actions are currently failing before a runner is allocated (the
-jobs report no runner and execute zero steps), which is an account/repository
-infrastructure condition rather than a test failure. A real TestFlight upload
-also still requires the private signing and App Store Connect secrets listed in
-[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md).
+GitHub-hosted Actions are currently blocked before the workflow starts. GitHub's
+[latest run](https://github.com/sachin6174/News-App/actions/runs/33573349155)
+states: “The job was not started because your account is locked due to a billing
+issue.” That is an account condition, not an app test failure. A real TestFlight
+upload also still requires the private signing and App Store Connect secrets
+listed in [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md).
 
 ## Honest résumé bullets after Mac validation
 

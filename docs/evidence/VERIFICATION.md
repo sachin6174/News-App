@@ -69,8 +69,9 @@ private external credentials:
 - a live-news run needs the replacement `NEWS_API_KEY` supplied outside Git;
 - TestFlight needs the distribution certificate, provisioning profile, and App
   Store Connect issuer/key values listed in `docs/TESTFLIGHT.md`;
-- GitHub Actions must allocate a hosted runner—the observed failures happen
-  before checkout and execute zero workflow steps.
+- GitHub Actions is blocked before checkout because GitHub reports that the
+  account is locked due to a billing issue; the confirming run is
+  [iOS CI #8](https://github.com/sachin6174/News-App/actions/runs/33573349155).
 
 Those are account operations, not missing Swift functions. Until they are done,
 the accurate claim is “Mac-verified, release-automation-ready,” not “published to
