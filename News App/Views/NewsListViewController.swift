@@ -39,9 +39,16 @@ final class NewsListViewController: UIViewController {
         viewModel.start()
     }
 
-    /// Stops a URLSession task or retry sleep if the whole controller is released.
-    deinit {
-        viewModel.cancelLoading()
+    /// Stops URLSession and retry work when this screen is truly removed.
+    ///
+    /// `deinit` is not guaranteed to run on Swift's main actor, while UIKit view
+    /// lifecycle methods do. Checking these two flags also avoids cancelling the
+    /// feed merely because the user opened an article detail screen on top of it.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if isMovingFromParent || navigationController?.isBeingDismissed == true {
+            viewModel.cancelLoading()
+        }
     }
 
     /// Configures the large title and searchable navigation bar.
