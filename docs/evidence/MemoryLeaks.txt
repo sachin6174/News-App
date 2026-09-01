@@ -1,0 +1,27 @@
+Process 55077 is not debuggable. Due to security restrictions, leaks can only show or save contents of readonly memory of restricted processes.
+
+Process:         News App [55077]
+Path:            /Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/BBA79344-5B42-4D9F-81CB-593E47657A37/News App.app/News App
+Load Address:    0x104470000
+Identifier:      in.sachinserver.News-App
+Version:         1.0 (1)
+Code Type:       ARM64
+Platform:        iOS Simulator
+Parent Process:  launchd_sim [52699]
+Target Type:     corpse
+
+Date/Time:       2026-09-02 05:24:42.491 +0530
+Launch Time:     2026-09-02 05:24:35.882 +0530
+OS Version:      macOS 26.6.2 (25G83)
+Report Version:  7
+Analysis Tool:   /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/bin/leaks
+Analysis Tool Version:  iOS Simulator 26.5 (23F77)
+
+Physical footprint:         21.9M
+Physical footprint (peak):  22.8M
+Idle exit:                  untracked
+----
+
+leaks Report Version: 4.0
+Process 55077: 53407 nodes malloced for 7710 KB
+Process 55077: 0 leaks for 0 total leaked bytes.

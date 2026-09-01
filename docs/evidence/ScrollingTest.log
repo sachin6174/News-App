@@ -1,0 +1,9 @@
+Writing result bundle at path:
+	/tmp/news-app-codex.ob9GmM/EvidenceTraces/ScrollingTest.xcresult
+
+2026-09-02 05:21:26.587 xcodebuild[54740:2192150] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-09-02 05:21:26.587 xcodebuild[54740:2192150] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-09-02 05:22:27.793 xcodebuild[54740:2192150] [MT] IDETestOperationsObserverDebug: 67.764 elapsed -- Testing started completed.
+2026-09-02 05:22:27.793 xcodebuild[54740:2192150] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-02 05:22:27.793 xcodebuild[54740:2192150] [MT] IDETestOperationsObserverDebug: 67.764 sec, +67.764 sec -- end
+Testing started

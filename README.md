@@ -187,15 +187,23 @@ depend on a changing headline, a real key, or internet availability.
 - [docs/TESTFLIGHT.md](docs/TESTFLIGHT.md) lists every required GitHub secret and
   the one-time App Store Connect setup.
 
-This Windows checkout cannot run Xcode or Instruments. Therefore this repository
-does **not** invent launch-time or memory numbers. Run the macOS workflow/profile,
-store the `.xcresult`/`.trace` evidence, and record measured values before quoting
-specific performance improvements on a résumé.
+The production branch was transferred to an Apple-silicon Mac and verified with
+Xcode 26.6 on an iPhone 17 Pro simulator running iOS 26.5. All 17 unit,
+integration, UI, accessibility, and performance tests passed; static analysis and
+a Release simulator build also passed. Instruments Time Profiler/Network trace
+manifests, XCTest metrics, a leak report, environment details, and a running-app
+screenshot are committed under [docs/evidence](docs/evidence). See the exact,
+non-inflated results in [docs/evidence/VERIFICATION.md](docs/evidence/VERIFICATION.md).
 
-## Honest résumé bullets after validation
+GitHub-hosted Actions are currently failing before a runner is allocated (the
+jobs report no runner and execute zero steps), which is an account/repository
+infrastructure condition rather than a test failure. A real TestFlight upload
+also still requires the private signing and App Store Connect secrets listed in
+[docs/TESTFLIGHT.md](docs/TESTFLIGHT.md).
 
-After CI passes on macOS and a TestFlight build is uploaded, these statements match
-the implemented code:
+## Honest résumé bullets after Mac validation
+
+These statements now match both the implemented code and the saved Mac evidence:
 
 > Built an offline-first iOS client using UIKit, SwiftUI, URLSession, Codable and
 > Core Data, supporting REST API pagination, image caching, bounded retries,
@@ -206,5 +214,5 @@ the implemented code:
 > XCUITest coverage and added repeatable Instruments profiling for launch,
 > scrolling, networking and memory.
 
-Do not claim a production TestFlight release, passing CI percentage, or measured
-performance number until the corresponding external run has actually completed.
+Do not claim a production TestFlight release or passing GitHub Actions percentage
+until those external account-dependent runs actually complete.

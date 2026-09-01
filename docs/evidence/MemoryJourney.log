@@ -1,0 +1,9 @@
+Writing result bundle at path:
+	/tmp/news-app-codex.ob9GmM/EvidenceTraces/MemoryJourney.xcresult
+
+2026-09-02 05:24:23.915 xcodebuild[55027:2197857] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-09-02 05:24:23.915 xcodebuild[55027:2197857] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-09-02 05:24:35.047 xcodebuild[55027:2197857] [MT] IDETestOperationsObserverDebug: 16.557 elapsed -- Testing started completed.
+2026-09-02 05:24:35.047 xcodebuild[55027:2197857] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-02 05:24:35.047 xcodebuild[55027:2197857] [MT] IDETestOperationsObserverDebug: 16.557 sec, +16.557 sec -- end
+Testing started

@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+
+<trace-toc>
+    <run number="1">
+        <info>
+            <target>
+                <device platform="macOS" model="MacBook Air" name="sachin’s MacBook Air (2)" os-version="26.6.2 (25G83)" uuid="D2276248-9B8A-53F4-86CB-F9A83C846D5C"/>
+                <all-processes/>
+            </target>
+            <summary>
+                <start-date>2026-09-02T05:23:33.151+05:30</start-date>
+                <end-date>2026-09-02T05:23:59.161+05:30</end-date>
+                <duration>26.010267</duration>
+                <end-reason>Time limit reached</end-reason>
+                <instruments-version>16.0 (17F113)</instruments-version>
+                <template-name>Network</template-name>
+                <recording-mode>Deferred</recording-mode>
+                <time-limit>25 seconds</time-limit>
+            </summary>
+        </info>
+        <processes>
+            <process name="PlistBuddy" pid="54971" path="Unknown"/>
+            <process name="locationd" pid="52728" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/locationd"/>
+            <process name="SimRenderServer" pid="52695" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer"/>
+            <process name="AssetCache" pid="54284" path="AssetCache"/>
+            <process name="lsd" pid="52768" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/lsd"/>
+            <process name="simctl" pid="54969" path="Unknown"/>
+            <process name="dasd" pid="52730" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/dasd"/>
+            <process name="WindowServer" pid="476" path="WindowServer"/>
+            <process name="mds_stores" pid="753" path="mds_stores"/>
+            <process name="airportd" pid="494" path="airportd"/>
+            <process name="pgrep" pid="54963" path="Unknown"/>
+            <process name="geodMachServiceBridge" pid="54283" path="/System/Library/PrivateFrameworks/GeoServices.framework/geodMachServiceBridge"/>
+            <process name="triald" pid="54066" path="/usr/libexec/triald"/>
+            <process name="proactiveeventtrackerd" pid="55001" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="osascript" pid="55006" path="Unknown"/>
+            <process name="xctrace" pid="54953" path="/Applications/Xcode.app/Contents/Developer/usr/bin/xctrace"/>
+            <process name="pgrep" pid="54996" path="Unknown"/>
+            <process name="pgrep" pid="54982" path="Unknown"/>
+            <process name="triald_system" pid="54285" path="triald_system"/>
+            <process name="facetimemessagestored" pid="55002" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="com.apple.dt.instruments.dtsecur" pid="54364" path="com.apple.dt.ins"/>
+            <process name="storagekitd" pid="54272" path="storagekitd"/>
+            <process name="mobiletimerd" pid="53053" path="/System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd"/>
+            <process name="powerd" pid="416" path="powerd"/>
+            <process name="spotlightknowledged.updater" pid="46978" path="/usr/libexec/spotlightknowledged.updater"/>
+            <process name="containermanagerd" pid="839" path="/usr/libexec/containermanagerd"/>
+            <process name="deleted_helper" pid="54282" path="deleted_helper"/>
+            <process name="nearbyd" pid="926" path="nearbyd"/>
+            <process name="jetpackassetd" pid="52890" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/JetCore.framework/Support/jetpackassetd"/>
+            <process name="com.apple.CoreSimulator.CoreSim" pid="62622" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService"/>
+            <process name="simctl" pid="54972" path="Unknown"/>
+            <process name="osascript" pid="54997" path="Unknown"/>
+            <process name="pgrep" pid="54978" path="Unknown"/>
+            <process name="mdworker_shared" pid="54990" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"/>
+            <process name="appleeventsd" pid="668" path="appleeventsd"/>
+            <process name="kernel" pid="0" path="/System/Library/Kernels/kernel.release.t8103"/>
+            <process name="photolibraryd" pid="54715" path="/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd"/>
+            <process name="DTServiceHub" pid="54361" path="/Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsFoundation.framework/Versions/A/Resources/DTServiceHub"/>
+            <process name="com.apple.quicklook.ThumbnailsAg" pid="54289" path="/System/Library/Frameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent"/>
+            <process name="analyticsd" pid="491" path="analyticsd"/>
+            <process name="backupd-helper" pid="54286" path="backupd-helper"/>
+            <process name="revisiond" pid="463" path="revisiond"/>
+            <process name="com.apple.CodeSigningHelper" pid="61673" path="com.apple.CodeSi"/>
+            <process name="managedappdistributiond" pid="54987" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="Xcode" pid="62605" path="/Applications/Xcode.app/Contents/MacOS/Xcode"/>
+            <process name="Google Chrome Helper" pid="1195" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="Wispr Flow" pid="1355" path="/Applications/Wispr Flow.app/Contents/Resources/swift-helper-app-dist/Wispr Flow.app/Contents/MacOS/Wispr Flow"/>
+            <process name="mds" pid="431" path="mds"/>
+            <process name="Google Chrome Helper (Renderer)" pid="55004" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="mobiletimerd" pid="52718" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd"/>
+            <process name="xctrace" pid="54355" path="/Applications/Xcode.app/Contents/Developer/usr/bin/xctrace"/>
+            <process name="osascript" pid="54992" path="Unknown"/>
+            <process name="launchservicesd" pid="445" path="launchservicesd"/>
+            <process name="amsaccountsd" pid="52740" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleMediaServices.framework/amsaccountsd"/>
+            <process name="MailCacheDelete" pid="54944" path="Unknown"/>
+            <process name="cfprefsd" pid="479" path="cfprefsd"/>
+            <process name="Finder" pid="1104" path="/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder"/>
+            <process name="pgrep" pid="54991" path="Unknown"/>
+            <process name="PlistBuddy" pid="54974" path="Unknown"/>
+            <process name="mlhostd" pid="55000" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="facetimemessagestored" pid="54967" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="osascript" pid="54985" path="Unknown"/>
+            <process name="pboard" pid="838" path="/usr/libexec/pboard"/>
+            <process name="pgrep" pid="54975" path="Unknown"/>
+            <process name="spotlightknowledged.updater" pid="52885" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/spotlightknowledged.updater"/>
+            <process name="cloudd" pid="42856" path="/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd"/>
+            <process name="cfprefsd" pid="827" path="/usr/sbin/cfprefsd"/>
+            <process name="pgrep" pid="54980" path="Unknown"/>
+            <process name="proactiveeventtrackerd" pid="54989" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="WallpaperAerialsExtension" pid="1122" path="/System/Library/ExtensionKit/Extensions/WallpaperAerialsExtension.appex/Contents/MacOS/WallpaperAerialsExtension"/>
+            <process name="proactiveeventtrackerd" pid="54968" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="diagnosticd" pid="52755" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/diagnosticd"/>
+            <process name="appstoreagent" pid="54687" path="/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent"/>
+            <process name="com.apple.appkit.xpc.openAndSave" pid="62997" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService"/>
+            <process name="backupd" pid="564" path="backupd"/>
+            <process name="facetimemessagestored" pid="54988" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="askpermissiond" pid="52724" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AskPermission.framework/Support/askpermissiond"/>
+            <process name="TVCacheExtension" pid="54949" path="Unknown"/>
+            <process name="managedappdistributiond" pid="54966" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="fontd" pid="980" path="/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd"/>
+            <process name="osascript" pid="54976" path="Unknown"/>
+            <process name="itunesstored" pid="52917" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/iTunesStore.framework/Support/itunesstored"/>
+            <process name="logd" pid="402" path="logd"/>
+            <process name="sysmond" pid="1579" path="sysmond"/>
+            <process name="deleted" pid="54281" path="/System/Library/PrivateFrameworks/CacheDelete.framework/deleted"/>
+            <process name="imklaunchagent" pid="1125" path="/System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent"/>
+            <process name="diagnostics_agent" pid="1051" path="/System/Library/CoreServices/diagnostics_agent"/>
+            <process name="mlhostd" pid="54965" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="fseventsd" pid="406" path="fseventsd"/>
+            <process name="installd" pid="54288" path="installd"/>
+            <process name="gamecontrollerd" pid="52770" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/gamecontrollerd"/>
+            <process name="AMPLibraryAgent" pid="54734" path="/System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPLibraryAgent"/>
+            <process name="amsengagementd" pid="52898" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd"/>
+            <process name="osascript" pid="54964" path="Unknown"/>
+            <process name="trustd" pid="876" path="/usr/libexec/trustd"/>
+            <process name="opendirectoryd" pid="443" path="opendirectoryd"/>
+            <process name="Google Chrome" pid="1086" path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"/>
+            <process name="corespotlightd" pid="952" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd"/>
+            <process name="gamecontrollerd" pid="53157" path="gamecontrollerd"/>
+            <process name="CacheDeleteExtension" pid="54948" path="Unknown"/>
+            <process name="fileproviderd" pid="911" path="/System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd"/>
+            <process name="News App" pid="54977" path="/Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/7B187F0B-554B-4950-AC3D-EE2128A98B07/News App.app/News App"/>
+            <process name="system_installd" pid="54290" path="system_installd"/>
+            <process name="systemstats" pid="410" path="systemstats"/>
+            <process name="pgrep" pid="55005" path="Unknown"/>
+            <process name="WiFiAgent" pid="870" path="/System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent"/>
+            <process name="tccd" pid="61677" path="/System/Library/PrivateFrameworks/TCC.framework/Support/tccd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54995" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="replayd" pid="53101" path="/usr/libexec/replayd"/>
+            <process name="lsd" pid="842" path="/usr/libexec/lsd"/>
+            <process name="SimMetalHost (iPhone 17 Pro: def" pid="52696" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost"/>
+            <process name="pgrep" pid="54984" path="Unknown"/>
+            <process name="clipserviced" pid="52916" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ClipServices.framework/clipserviced"/>
+            <process name="amsengagementd" pid="54710" path="/System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd"/>
+            <process name="cloudd" pid="54287" path="cloudd"/>
+            <process name="osascript" pid="54999" path="Unknown"/>
+            <process name="osascript" pid="54994" path="Unknown"/>
+            <process name="pgrep" pid="54993" path="Unknown"/>
+            <process name="osascript" pid="54979" path="Unknown"/>
+            <process name="amsaccountsd" pid="51928" path="/System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd"/>
+            <process name="mobileassetd" pid="49249" path="mobileassetd"/>
+            <process name="coreservicesd" pid="481" path="coreservicesd"/>
+            <process name="tccd" pid="477" path="tccd"/>
+            <process name="MusicCacheExtension" pid="54947" path="Unknown"/>
+            <process name="osascript" pid="54981" path="Unknown"/>
+            <process name="fontservicesd" pid="52795" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/Support/fontservicesd"/>
+            <process name="pgrep" pid="54998" path="Unknown"/>
+            <process name="com.apple.WebKit.Networking" pid="54962" path="Unknown"/>
+            <process name="osascript" pid="54983" path="Unknown"/>
+            <process name="mlhostd" pid="54986" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="managedappdistributiond" pid="55003" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="SimMetalHost (iPhone 17 Pro: ren" pid="52698" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost"/>
+            <process name="cfprefsd" pid="52759" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/sbin/cfprefsd"/>
+        </processes>
+        <data>
+            <table schema="tick" frequency="10" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms."/>
+            <table schema="com-apple-cfnetwork-transaction-intervals-full-info"/>
+            <table schema="com-apple-cfnetwork-transaction-drawables"/>
+            <table schema="os-log" category="HAR" subsystem="&quot;com.apple.CFNetwork&quot;" documentation="Holds a message from the OS's Unified Logging and Tracing component."/>
+            <table category="PointsOfInterest" schema="os-log" documentation="Holds a message from the OS's Unified Logging and Tracing component."/>
+            <table schema="os-signpost" category="&quot;HTTP Transactions&quot;" subsystem="&quot;com.apple.CFNetwork.Instruments&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component."/>
+            <table schema="os-signpost" category="DynamicStackTracing" subsystem="&quot;com.apple.CFNetwork.Instruments&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component."/>
+            <table schema="os-signpost" dynamic-tracing-enabled-subsystems="&quot;com.apple.neappprivacy&quot;" category="PointsOfInterest" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component."/>
+            <table schema="com-apple-cfnetwork-transaction-states"/>
+            <table schema="com-apple-cfnetwork-task-ends" documentation="
+            Contains the task complete events for each task as soon as they happen. This also unwraps the json-encoded
+            metadata contained in a task end event and saves it into individual columns. This is used to power the task
+            aggregation track and to be combined with the task start events to full task intervals
+        "/>
+            <table target-pid="ALL" schema="global-poi-layout" exclude-os-logs="0" documentation="A point of interest that can be laid out on a graph view."/>
+            <table schema="kdebug-signpost" target-pid="ALL" documentation="Marks a point in time denoted by a special type of kdebug trace."/>
+            <table schema="com-apple-cfnetwork-transaction-intervals"/>
+            <table schema="network-interface-detection" documentation="Determines when a new network interface has been detected."/>
+            <table codes="&quot;0x1f,0x05&quot;" target="ALL" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points."/>
+            <table schema="process-info" documentation="Associates processes with their process names."/>
+            <table schema="dyld-library-load" target-pid="ALL"/>
+            <table category="PointsOfInterest" schema="os-log-arg" documentation="Holds a metadata argument from the OS's Unified Logging and Tracing component."/>
+            <table codes="&quot;0x07,0x00&quot; &quot;0x1f,0x05&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table target-pid="ALL" schema="region-of-interest" exclude-os-logs="0" documentation="Determined by the modelers and represent a focus area that the developer is likely to be intereseted in."/>
+            <table codes="&quot;46,2&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x21,0xa&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x1,0xa&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table schema="global-roi-layout" target-pid="ALL" documentation="Layout information for graphing regions of interest."/>
+            <table schema="com-apple-cfnetwork-aggregation-drawables"/>
+            <table schema="com-apple-cfnetwork-task-intervals"/>
+            <table schema="com-apple-cfnetwork-task-drawables"/>
+            <table schema="network-connection-update" documentation="A statistical update related to a given connection."/>
+            <table schema="network-connection-detected" target-pid="ALL" documentation="Marks when a new network connection has been detected."/>
+            <table schema="gcd-perf-event" target-pid="ALL" documentation="Find sub-optimal uses of Grand Central Dispatch."/>
+            <table schema="thread-info" documentation="Associates threads with their owning process."/>
+            <table schema="configured-network-interface" documentation="Maps the BSD network interface identifiers to user-friendly, displayable names."/>
+            <table schema="com-apple-cfnetwork-harlogging-schema"/>
+            <table schema="com-apple-cfnetwork-task-starts" documentation="
+            Contains only the first task-resume call for each task (subsequent ones for the same task, e.g. due to
+            pause-resume cycles are ignored), as soon as they happen. This also unwraps the json-encoded metadata about
+            a task start and saves it into individual columns. This is used to transmit information from tasks to related
+            transactions, e.g. to allow transactions to access the session of their associated task for grouping;
+            to power the task aggregation track; and to be combined with the task end events to full task intervals
+        "/>
+            <table schema="network-connection-stat" target-pid="ALL" documentation="Provides statistical information about a connection over a given time interval."/>
+            <table target-pid="ALL" schema="roi-metadata" exclude-os-logs="0" documentation="Describes details about a given region of interest."/>
+            <table category="PointsOfInterest" schema="os-signpost-arg" documentation="Holds a signpost metadata argument from the OS's Unified Logging and Tracing component."/>
+            <external-format format="har" source-schema="com-apple-cfnetwork-harlogging-schema"/>
+        </data>
+        <tracks/>
+    </run>
+</trace-toc>

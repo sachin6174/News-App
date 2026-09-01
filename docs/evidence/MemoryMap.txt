@@ -1,0 +1,73 @@
+Process:         News App [55077]
+Path:            /Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/BBA79344-5B42-4D9F-81CB-593E47657A37/News App.app/News App
+Load Address:    0x104470000
+Identifier:      in.sachinserver.News-App
+Version:         1.0 (1)
+Code Type:       ARM64
+Platform:        iOS Simulator
+Parent Process:  launchd_sim [52699]
+Target Type:     corpse
+
+Date/Time:       2026-09-02 05:24:45.651 +0530
+Launch Time:     2026-09-02 05:24:35.882 +0530
+OS Version:      macOS 26.6.2 (25G83)
+Report Version:  7
+Analysis Tool:   /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/bin/vmmap
+Analysis Tool Version:  iOS Simulator 26.5 (23F77)
+
+Physical footprint:         23.7M
+Physical footprint (peak):  24.1M
+Idle exit:                  untracked
+----
+
+ReadOnly portion of Libraries: Total=1.3G resident=164.0M(12%) swapped_out_or_unallocated=1.2G(88%)
+Writable regions: Total=39.5M written=1510K(4%) resident=9606K(24%) swapped_out=3776K(9%) unallocated=26.5M(67%)
+
+                                VIRTUAL RESIDENT    DIRTY  SWAPPED VOLATILE   NONVOL    EMPTY   REGION
+REGION TYPE                        SIZE     SIZE     SIZE     SIZE     SIZE     SIZE     SIZE    COUNT (non-coalesced)
+===========                     ======= ========    =====  ======= ========   ======    =====  =======
+Activity Tracing                   256K      32K      32K       0K       0K      32K       0K        1
+CG raster data                    2768K      80K      80K    1168K       0K       0K       0K       27
+CoreAnimation                     1664K    1424K    1424K     128K       0K    1424K       0K       27
+Foundation                          16K       0K       0K      16K       0K       0K       0K        1
+IOSurface                          128K       0K       0K       0K       0K       0K       0K        1
+Kernel Alloc Once                   32K      16K      16K       0K       0K       0K       0K        1
+MALLOC                            1024K      80K      80K       0K       0K       0K       0K        1
+MALLOC guard page                   32K       0K       0K       0K       0K       0K       0K        2
+MALLOC metadata                    864K     256K     256K      80K       0K       0K       0K        5
+MALLOC_NANO metadata                32K      32K      32K       0K       0K       0K       0K        1         see MALLOC ZONE table below
+MALLOC_SMALL                      20.0M    5920K    5920K    3600K       0K       0K       0K       57         see MALLOC ZONE table below
+MALLOC_TINY                       4096K     192K     192K       0K       0K       0K       0K        1         see MALLOC ZONE table below
+STACK GUARD                       56.1M       0K       0K       0K       0K       0K       0K        5
+Stack                             10.1M     192K     192K      64K       0K       0K       0K        5
+Stack (reserved)                   544K       0K       0K       0K       0K       0K       0K        1         reserved VM address space (unallocated)
+Stack Guard                         16K       0K       0K       0K       0K       0K       0K        1
+__AUTH_CONST                        32K      32K      32K       0K       0K       0K       0K        1
+__DATA                            25.4M    11.5M    4706K      48K       0K       0K       0K      498
+__DATA_CONST                      71.5M    39.2M    3196K    1975K       0K       0K       0K      521
+__DATA_DIRTY                       155K     139K     139K      16K       0K       0K       0K       13
+__FONT_DATA                        2352       0K       0K       0K       0K       0K       0K        1
+__LINKEDIT                       708.1M    10.1M       0K       0K       0K       0K       0K        9
+__LLVM_COV                          16K       0K       0K       0K       0K       0K       0K        1
+__OBJC_RO                         55.6M    24.2M       0K       0K       0K       0K       0K        1
+__OBJC_RW                         2332K    1580K      28K       0K       0K       0K       0K        1
+__TEXT                           639.6M   153.9M       0K       0K       0K       0K       0K      533
+__TPRO_CONST                       164K      52K      52K       0K       0K       0K       0K        3
+dyld private memory                3.0G     512K     512K     272K       0K       0K       0K       12
+mapped file                      201.9M    8720K       0K       0K       0K       0K       0K       12
+page table in kernel              1510K    1510K    1510K       0K       0K       0K       0K        1
+shared memory                       48K      16K      16K       0K       0K       0K       0K        2
+unused but dirty shlib __DATA     3432K    1279K     983K     969K       0K       0K       0K      346
+===========                     ======= ========    =====  ======= ========   ======    =====  =======
+TOTAL                              4.7G   260.5M    18.9M    8336K       0K    1456K       0K     2092
+TOTAL, minus reserved VM space     4.7G   260.5M    18.9M    8336K       0K    1456K       0K     2092
+
+                                         VIRTUAL   RESIDENT      DIRTY    SWAPPED ALLOCATION      BYTES DIRTY+SWAP          REGION
+MALLOC ZONE                                 SIZE       SIZE       SIZE       SIZE      COUNT  ALLOCATED  FRAG SIZE  % FRAG   COUNT
+===========                              =======  =========  =========  =========  =========  =========  =========  ======  ======
+DefaultMallocZone_0x104c54000              23.9M      5856K      5856K      3344K      49876      7410K      1790K     20%      34
+AttributeGraph_0x1055b5960                 1024K        80K        80K         0K       1547        56K        24K     31%       1
+QuartzCore_0x104d0c000                      576K       448K       448K        80K       1768       146K       382K     73%      20
+AttributeGraph graph data_0x104d20000       208K        16K        16K       192K         34        15K       193K     93%       7
+===========                              =======  =========  =========  =========  =========  =========  =========  ======  ======
+TOTAL                                      25.7M      6400K      6400K      3616K      53225      7627K      2389K     24%      62

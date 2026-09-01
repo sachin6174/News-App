@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+
+<trace-toc>
+    <run number="1">
+        <info>
+            <target>
+                <device platform="macOS" model="MacBook Air" name="sachin’s MacBook Air (2)" os-version="26.6.2 (25G83)" uuid="D2276248-9B8A-53F4-86CB-F9A83C846D5C"/>
+                <all-processes/>
+            </target>
+            <summary>
+                <start-date>2026-09-02T05:21:12.113+05:30</start-date>
+                <end-date>2026-09-02T05:22:28.150+05:30</end-date>
+                <duration>76.036926</duration>
+                <end-reason>Time limit reached</end-reason>
+                <instruments-version>16.0 (17F113)</instruments-version>
+                <template-name>Time Profiler</template-name>
+                <recording-mode>Deferred</recording-mode>
+                <time-limit>1 minute, 15 seconds</time-limit>
+                <intruments-recording-settings>
+                    <instrument name="Hangs">
+                        <array>
+                            <dictionary>
+                                <key name="Reporting Threshold">Include Microhangs (&gt;250ms)</key>
+                            </dictionary>
+                        </array>
+                    </instrument>
+                </intruments-recording-settings>
+            </summary>
+        </info>
+        <processes>
+            <process name="com.apple.DriverKit-AppleBCMWLAN" pid="582" path="com.apple.Driver"/>
+            <process name="mlhostd" pid="54761" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="pgrep" pid="54781" path="Unknown"/>
+            <process name="facetimemessagestored" pid="54856" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="pgrep" pid="54834" path="Unknown"/>
+            <process name="distnoted" pid="596" path="distnoted"/>
+            <process name="Antigravity IDE Helper (GPU)" pid="1215" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (GPU).app/Contents/MacOS/Antigravity IDE Helper (GPU)"/>
+            <process name="osascript" pid="54850" path="Unknown"/>
+            <process name="osascript" pid="54786" path="Unknown"/>
+            <process name="tccd" pid="61677" path="/System/Library/PrivateFrameworks/TCC.framework/Support/tccd"/>
+            <process name="mlhostd" pid="54851" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="distnoted" pid="558" path="distnoted"/>
+            <process name="newsd" pid="53896" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NewsDaemon.framework/newsd"/>
+            <process name="splashboardd" pid="52923" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/splashboardd"/>
+            <process name="appstored" pid="52915" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstored"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54811" path="Unknown"/>
+            <process name="SimMetalHost (iPhone 17 Pro: ren" pid="52698" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost"/>
+            <process name="chronod" pid="52775" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod"/>
+            <process name="CommCenter" pid="53073" path="/System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter"/>
+            <process name="Google Chrome Helper (Renderer)" pid="34309" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="com.apple.dt.instruments.dtsecur" pid="54364" path="com.apple.dt.ins"/>
+            <process name="Python" pid="1297" path="/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"/>
+            <process name="analyticsd" pid="491" path="analyticsd"/>
+            <process name="distnoted" pid="458" path="distnoted"/>
+            <process name="diskimagesiod" pid="1287" path="diskimagesiod"/>
+            <process name="osascript" pid="54743" path="Unknown"/>
+            <process name="SimStreamProcessorService" pid="65024" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimStreamProcessorServices.simdeviceio/Contents/XPCServices/SimStreamProcessorService.xpc/Contents/MacOS/SimStreamProcessorService"/>
+            <process name="routined" pid="52911" path="/usr/libexec/routined"/>
+            <process name="DTServiceHub" pid="54768" path="Unknown"/>
+            <process name="Python" pid="1303" path="/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"/>
+            <process name="AMPLibraryAgent" pid="54734" path="/System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPLibraryAgent"/>
+            <process name="sshd-session" pid="54583" path="/usr/libexec/sshd-session"/>
+            <process name="linkd" pid="38704" path="/usr/libexec/linkd"/>
+            <process name="Wispr Flow Helper" pid="1254" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper.app/Contents/MacOS/Wispr Flow Helper"/>
+            <process name="homed" pid="52796" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed"/>
+            <process name="SWBBuildService" pid="54745" path="/Applications/Xcode.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/MacOS/SWBBuildService"/>
+            <process name="com.apple.CoreSimulator.CoreSimu" pid="62622" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/com.apple.CoreSimulator.CoreSimulatorService.xpc/Contents/MacOS/com.apple.CoreSimulator.CoreSimulatorService"/>
+            <process name="appstoreagent" pid="54687" path="/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent"/>
+            <process name="distnoted" pid="766" path="/usr/sbin/distnoted"/>
+            <process name="distnoted" pid="814" path="distnoted"/>
+            <process name="osascript" pid="54775" path="Unknown"/>
+            <process name="Wispr Flow Helper" pid="1365" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper.app/Contents/MacOS/Wispr Flow Helper"/>
+            <process name="AMPArtworkAgent" pid="54737" path="/System/Library/PrivateFrameworks/AMPLibrary.framework/Versions/A/Support/AMPArtworkAgent"/>
+            <process name="pgrep" pid="54774" path="Unknown"/>
+            <process name="calaccessd" pid="52231" path="/System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd"/>
+            <process name="rtcreportingd" pid="54056" path="rtcreportingd"/>
+            <process name="keybagd" pid="54756" path="keybagd"/>
+            <process name="activityawardsd" pid="52946" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ActivityAwardsServices.framework/activityawardsd"/>
+            <process name="osascript" pid="54848" path="Unknown"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54575" path="Unknown"/>
+            <process name="kdc" pid="692" path="kdc"/>
+            <process name="mlhostd" pid="54791" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="mDNSResponderHelper" pid="549" path="mDNSResponderHel"/>
+            <process name="logd_helper" pid="52976" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/logd_helper"/>
+            <process name="coresymbolicationd" pid="54311" path="coresymbolicatio"/>
+            <process name="News AppUITests-Runner" pid="54767" path="/Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/F3597EB4-A498-4FFD-9B4D-6564DEF1892F/News AppUITests-Runner.app/News AppUITests-Runner"/>
+            <process name="imklaunchagent" pid="1125" path="/System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent"/>
+            <process name="com.apple.cmio.videodriverkitho" pid="567" path="com.apple.cmio.v"/>
+            <process name="donotdisturbd" pid="52767" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd"/>
+            <process name="distnoted" pid="929" path="distnoted"/>
+            <process name="pgrep" pid="54805" path="Unknown"/>
+            <process name="biomed" pid="60582" path="biomed"/>
+            <process name="homed" pid="46924" path="/System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed"/>
+            <process name="EmojiPosterExtension" pid="52997" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/EmojiPoster.app/Extensions/EmojiPosterExtension.appex/EmojiPosterExtension"/>
+            <process name="pgrep" pid="54837" path="Unknown"/>
+            <process name="ld" pid="54755" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld"/>
+            <process name="nanotimekitcompaniond" pid="52931" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NanoTimeKit.framework/nanotimekitcompaniond"/>
+            <process name="audiomxd" pid="531" path="audiomxd"/>
+            <process name="com.apple.WebKit.Networking" pid="54716" path="Unknown"/>
+            <process name="online-auth-agent" pid="52940" path="online-auth-agen"/>
+            <process name="ContextStoreAgent" pid="46813" path="/System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/ContextStoreAgent"/>
+            <process name="nearbyd" pid="926" path="nearbyd"/>
+            <process name="pgrep" pid="54787" path="Unknown"/>
+            <process name="UserEventAgent" pid="404" path="UserEventAgent"/>
+            <process name="NotificationCenter" pid="994" path="/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter"/>
+            <process name="talagentd" pid="975" path="/System/Library/CoreServices/talagentd"/>
+            <process name="News App" pid="54605" path="/Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/B09F0696-14E1-4E03-BDD6-22177055C7F0/News App.app/News App"/>
+            <process name="deleted_helper" pid="54282" path="deleted_helper"/>
+            <process name="AssetCacheLocatorService" pid="52937" path="/System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService"/>
+            <process name="mlhostd" pid="54839" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="ReportCrash" pid="54640" path="/System/Library/CoreServices/ReportCrash"/>
+            <process name="osascript" pid="54823" path="Unknown"/>
+            <process name="Cursor Helper" pid="3296" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="deviceaccessd" pid="52798" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/deviceaccessd"/>
+            <process name="Finder" pid="1104" path="/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder"/>
+            <process name="linkd" pid="52786" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/linkd"/>
+            <process name="CollectionsPoster" pid="52996" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/CollectionsPoster.appex/CollectionsPoster"/>
+            <process name="Antigravity IDE Helper" pid="1414" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper"/>
+            <process name="searchpartyuseragent" pid="54694" path="/usr/libexec/searchpartyuseragent"/>
+            <process name="osascript" pid="54783" path="Unknown"/>
+            <process name="mediaanalysisd" pid="52910" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MediaAnalysis.framework/mediaanalysisd"/>
+            <process name="appleaccountd" pid="52833" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/appleaccountd"/>
+            <process name="CoreDeviceService" pid="62624" path="/Library/Developer/PrivateFrameworks/CoreDevice.framework/Versions/A/XPCServices/CoreDeviceService.xpc/Contents/MacOS/CoreDeviceService"/>
+            <process name="launchd" pid="1" path="launchd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="19721" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="commerce" pid="52939" path="/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce"/>
+            <process name="pgrep" pid="54857" path="Unknown"/>
+            <process name="CacheDeleteExtension" pid="54683" path="Unknown"/>
+            <process name="biometrickitd" pid="54711" path="biometrickitd"/>
+            <process name="WallpaperAgent" pid="1109" path="/System/Library/CoreServices/WallpaperAgent.app/Contents/MacOS/WallpaperAgent"/>
+            <process name="DTServiceHub" pid="53182" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/DVTInstrumentsFoundation.framework/DTServiceHub"/>
+            <process name="osascript" pid="54819" path="Unknown"/>
+            <process name="contactsd" pid="52778" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Contacts.framework/Support/contactsd"/>
+            <process name="amsaccountsd" pid="51928" path="/System/Library/PrivateFrameworks/AppleMediaServices.framework/Resources/amsaccountsd"/>
+            <process name="automationmode-writer" pid="53862" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AutomationMode.framework/automationmode-writer"/>
+            <process name="ibtoold" pid="54751" path="/Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold"/>
+            <process name="pasted" pid="52764" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/Pasteboard.framework/Support/pasted"/>
+            <process name="Unity2025Poster" pid="52985" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/UnityPosterApp.app/Extensions/Unity2025Poster.appex/Unity2025Poster"/>
+            <process name="agy" pid="68541" path="/Users/REDACTED_USER/.local/bin/agy"/>
+            <process name="powerdatad" pid="53951" path="powerdatad"/>
+            <process name="fairplayd" pid="1024" path="fairplayd"/>
+            <process name="clipserviced" pid="52916" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ClipServices.framework/clipserviced"/>
+            <process name="suggestd" pid="52826" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CoreSuggestions.framework/suggestd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="19706" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="Cursor" pid="3256" path="/Applications/Cursor.app/Contents/MacOS/Cursor"/>
+            <process name="assessmentagent" pid="52934" path="/usr/libexec/assessmentagent"/>
+            <process name="coreauthd" pid="809" path="coreauthd"/>
+            <process name="distnoted" pid="26815" path="distnoted"/>
+            <process name="mds" pid="431" path="mds"/>
+            <process name="osascript" pid="54799" path="Unknown"/>
+            <process name="symptomsd" pid="503" path="symptomsd"/>
+            <process name="appleeventsd" pid="668" path="appleeventsd"/>
+            <process name="Wispr Flow Helper (Renderer)" pid="64323" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper (Renderer).app/Contents/MacOS/Wispr Flow Helper (Renderer)"/>
+            <process name="Google Chrome Helper" pid="1195" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="siriknowledged" pid="52812" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/siriknowledged"/>
+            <process name="SpringBoard" pid="52703" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/CoreServices/SpringBoard.app/SpringBoard"/>
+            <process name="mDNSResponder" pid="500" path="mDNSResponder"/>
+            <process name="Codex (Renderer)" pid="1239" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Renderer).app/Contents/MacOS/Codex (Renderer)"/>
+            <process name="CloudTelemetryService" pid="42864" path="/System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService"/>
+            <process name="mdworker_shared" pid="54741" path="Unknown"/>
+            <process name="TVCacheExtension" pid="54682" path="Unknown"/>
+            <process name="clang" pid="54749" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"/>
+            <process name="appprotectiond" pid="52722" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/appprotectiond"/>
+            <process name="cfprefsd" pid="827" path="/usr/sbin/cfprefsd"/>
+            <process name="spotlightknowledged.updater" pid="46978" path="/usr/libexec/spotlightknowledged.updater"/>
+            <process name="Cursor Helper" pid="3382" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="authd" pid="521" path="authd"/>
+            <process name="mapssyncd" pid="52921" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MapsSync.framework/mapssyncd"/>
+            <process name="photosfaced" pid="53210" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/photosfaced"/>
+            <process name="jcode" pid="1296" path="/Users/REDACTED_USER/.local/bin/jcode"/>
+            <process name="launchd_sim" pid="52699" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/sbin/launchd_sim"/>
+            <process name="triald_system" pid="54285" path="triald_system"/>
+            <process name="findmydevice-user-agent" pid="54712" path="/usr/libexec/findmydevice-user-agent"/>
+            <process name="distnoted" pid="934" path="distnoted"/>
+            <process name="airportd" pid="494" path="airportd"/>
+            <process name="com.apple.siri.embeddedspeech" pid="54325" path="/System/Library/PrivateFrameworks/CoreEmbeddedSpeechRecognition.framework/Versions/A/XPCServices/com.apple.siri.embeddedspeech.xpc/Contents/MacOS/com.apple.siri.embeddedspeech"/>
+            <process name="filecoordinationd" pid="52907" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/sbin/filecoordinationd"/>
+            <process name="remindd" pid="52736" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/remindd"/>
+            <process name="com.apple.appkit.xpc.openAndSave" pid="47912" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService"/>
+            <process name="fontservicesd" pid="52795" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/Support/fontservicesd"/>
+            <process name="xpcroleaccountd" pid="53184" path="xpcroleaccountd"/>
+            <process name="findmylocateagent" pid="54701" path="/usr/libexec/findmylocateagent"/>
+            <process name="mdworker_shared" pid="54860" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"/>
+            <process name="distnoted" pid="52732" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/sbin/distnoted"/>
+            <process name="LogiPluginServiceExt" pid="1591" path="/Applications/Utilities/LogiPluginService.app/Contents/MonoBundle/LogiPluginServiceExt"/>
+            <process name="AccessibilityUIServer" pid="52784" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/CoreServices/AccessibilityUIServer.app/AccessibilityUIServer"/>
+            <process name="MIDIServer" pid="1590" path="/System/Library/Frameworks/CoreMIDI.framework/MIDIServer"/>
+            <process name="pgrep" pid="54832" path="Unknown"/>
+            <process name="ibtoold" pid="54753" path="/Applications/Xcode.app/Contents/Developer/usr/bin/ibtoold"/>
+            <process name="com.apple.CodeSigningHelper" pid="61673" path="com.apple.CodeSi"/>
+            <process name="Wispr Flow Helper (Renderer)" pid="1357" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper (Renderer).app/Contents/MacOS/Wispr Flow Helper (Renderer)"/>
+            <process name="Google Chrome Helper (Renderer)" pid="77303" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="pgrep" pid="54818" path="Unknown"/>
+            <process name="MailCacheDelete" pid="54678" path="Unknown"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54821" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="KernelEventAgent" pid="464" path="KernelEventAgent"/>
+            <process name="contextstored" pid="441" path="contextstored"/>
+            <process name="TextInputMenuAgent" pid="1304" path="/System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent"/>
+            <process name="mlhostd" pid="52789" path="/usr/libexec/mlhostd"/>
+            <process name="Spotlight" pid="1342" path="/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight"/>
+            <process name="facetimemessagestored" pid="54784" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="mlhostd" pid="54779" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="InfographPoster" pid="52982" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AmbientUI.framework/PlugIns/InfographPoster.appex/InfographPoster"/>
+            <process name="GradientPosterExtension" pid="52998" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/GradientPoster.app/Extensions/GradientPosterExtension.appex/GradientPosterExtension"/>
+            <process name="usbmuxd" pid="447" path="usbmuxd"/>
+            <process name="dasd" pid="454" path="dasd"/>
+            <process name="opendirectoryd" pid="443" path="opendirectoryd"/>
+            <process name="osascript" pid="54739" path="Unknown"/>
+            <process name="bird" pid="52891" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/iCloudDriveCore.framework/bird"/>
+            <process name="proactiveeventtrackerd" pid="54855" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="pgrep" pid="54822" path="Unknown"/>
+            <process name="PowerChime" pid="2970" path="/System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime"/>
+            <process name="language_server_macos_arm" pid="1250" path="/Applications/Antigravity IDE.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_arm"/>
+            <process name="sharingd" pid="52726" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/sharingd"/>
+            <process name="usermanagerd" pid="46894" path="usermanagerd"/>
+            <process name="Wispr Flow Helper (Renderer)" pid="1358" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper (Renderer).app/Contents/MacOS/Wispr Flow Helper (Renderer)"/>
+            <process name="Wispr Flow" pid="1099" path="/Applications/Wispr Flow.app/Contents/MacOS/Wispr Flow"/>
+            <process name="managedappdistributiond" pid="54780" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="Google Chrome Helper (Renderer)" pid="77291" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="GPUToolsCompatService" pid="62643" path="/Applications/Xcode.app/Contents/PlugIns/GPUDebugger.ideplugin/Contents/Frameworks/GPUToolsTransportAgents.framework/Versions/A/XPCServices/GPUToolsCompatService.xpc/Contents/MacOS/GPUToolsCompatService"/>
+            <process name="axassetsd" pid="52712" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AXAssetLoader.framework/Support/axassetsd"/>
+            <process name="runningboardd" pid="480" path="runningboardd"/>
+            <process name="siriactionsd" pid="52782" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/VoiceShortcuts.framework/Support/siriactionsd"/>
+            <process name="systemstatusd" pid="52229" path="systemstatusd"/>
+            <process name="containermanagerd" pid="839" path="/usr/libexec/containermanagerd"/>
+            <process name="geoanalyticsd" pid="53026" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GeoAnalytics.framework/geoanalyticsd"/>
+            <process name="Cursor Helper" pid="3298" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="ctkd" pid="52240" path="/System/Library/Frameworks/CryptoTokenKit.framework/ctkd"/>
+            <process name="AquaAppearanceHelper" pid="53351" path="/System/Library/PrivateFrameworks/SkyLight.framework//Versions/A/Resources/AquaAppearanceHelper.app/Contents/MacOS/AquaAppearanceHelper"/>
+            <process name="Google Chrome Helper (Renderer)" pid="19719" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="coreservicesd" pid="481" path="coreservicesd"/>
+            <process name="WindowManager" pid="976" path="/System/Library/CoreServices/WindowManager.app/Contents/MacOS/WindowManager"/>
+            <process name="coreaudiod" pid="489" path="coreaudiod"/>
+            <process name="VTEncoderXPCService" pid="53872" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTEncoderXPCService.xpc/Contents/MacOS/VTEncoderXPCService"/>
+            <process name="pgrep" pid="54777" path="Unknown"/>
+            <process name="loginwindow" pid="478" path="/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow"/>
+            <process name="sleepd" pid="52731" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SleepDaemon.framework/sleepd"/>
+            <process name="SidecarRelay" pid="39311" path="/usr/libexec/SidecarRelay"/>
+            <process name="WidgetRenderer_Default" pid="52819" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/WidgetRenderer_Default.app/WidgetRenderer_Default"/>
+            <process name="lsd" pid="52768" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/lsd"/>
+            <process name="WiFiAgent" pid="870" path="/System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent"/>
+            <process name="automationmode-writer" pid="53713" path="automationmode-w"/>
+            <process name="com.apple.appkit.xpc.openAndSave" pid="62997" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService"/>
+            <process name="xctrace" pid="54355" path="/Applications/Xcode.app/Contents/Developer/usr/bin/xctrace"/>
+            <process name="LogiPluginService" pid="1586" path="/Applications/Utilities/LogiPluginService.app/Contents/MacOS/LogiPluginService"/>
+            <process name="osascript" pid="54773" path="Unknown"/>
+            <process name="osascript" pid="54844" path="Unknown"/>
+            <process name="DTServiceHub" pid="54361" path="/Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsFoundation.framework/Versions/A/Resources/DTServiceHub"/>
+            <process name="installd" pid="52867" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/installd"/>
+            <process name="usernotificationsd" pid="852" path="/System/Library/PrivateFrameworks/UserNotificationsCore.framework/Support/usernotificationsd"/>
+            <process name="Google Chrome" pid="1086" path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"/>
+            <process name="Google Chrome Helper (Renderer)" pid="50966" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="lsd" pid="486" path="lsd"/>
+            <process name="assetsd" pid="52859" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/AssetsLibrary.framework/Support/assetsd"/>
+            <process name="Codex (Renderer)" pid="1321" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Renderer).app/Contents/MacOS/Codex (Renderer)"/>
+            <process name="actool" pid="54752" path="/Applications/Xcode.app/Contents/Developer/usr/bin/actool"/>
+            <process name="tvremoted" pid="52914" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/tvremoted"/>
+            <process name="callservicesd" pid="32810" path="/System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd"/>
+            <process name="AutomationModeUI" pid="53863" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AutomationMode.framework/AutomationModeUI.app/AutomationModeUI"/>
+            <process name="pgrep" pid="54770" path="Unknown"/>
+            <process name="mdworker_shared" pid="54695" path="Unknown"/>
+            <process name="managedappdistributiond" pid="54825" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="apsd" pid="444" path="apsd"/>
+            <process name="activitysharingd" pid="53069" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ActivitySharingServices.framework/activitysharingd"/>
+            <process name="swcd" pid="52899" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/swcd"/>
+            <process name="passd" pid="1072" path="/System/Library/PrivateFrameworks/PassKitCore.framework/passd"/>
+            <process name="login" pid="69410" path="login"/>
+            <process name="PhotosPosterProvider" pid="53002" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/PhotosPosterProvider.appex/PhotosPosterProvider"/>
+            <process name="pgrep" pid="54742" path="Unknown"/>
+            <process name="WallpaperAerialsExtension" pid="1122" path="/System/Library/ExtensionKit/Extensions/WallpaperAerialsExtension.appex/Contents/MacOS/WallpaperAerialsExtension"/>
+            <process name="MusicCacheExtension" pid="54681" path="Unknown"/>
+            <process name="mdworker_shared" pid="54758" path="Unknown"/>
+            <process name="photolibraryd" pid="54715" path="/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd"/>
+            <process name="actool" pid="54759" path="/Applications/Xcode.app/Contents/Developer/usr/bin/actool"/>
+            <process name="universalaccessd" pid="835" path="/usr/sbin/universalaccessd"/>
+            <process name="osascript" pid="54838" path="Unknown"/>
+            <process name="distnoted" pid="700" path="distnoted"/>
+            <process name="Codex (Service)" pid="1206" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Service).app/Contents/MacOS/Codex (Service)"/>
+            <process name="Codex (Service)" pid="1214" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Service).app/Contents/MacOS/Codex (Service)"/>
+            <process name="proactiveeventtrackerd" pid="54765" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="Autoupdate" pid="27717" path="/Applications/ChatGPT.app/Contents/Frameworks/Sparkle.framework/Versions/B/Autoupdate"/>
+            <process name="gamed" pid="52829" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/gamed"/>
+            <process name="CloudTelemetryService" pid="53137" path="/System/Library/PrivateFrameworks/CloudTelemetry.framework/Versions/A/XPCServices/CloudTelemetryService.xpc/Contents/MacOS/CloudTelemetryService"/>
+            <process name="LogiPluginServiceNative" pid="1589" path="/Applications/Utilities/LogiPluginService.app/Contents/MonoBundle/./LogiPluginServiceNative"/>
+            <process name="runningboardd" pid="52706" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/runningboardd"/>
+            <process name="askpermissiond" pid="52724" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AskPermission.framework/Support/askpermissiond"/>
+            <process name="sharingd" pid="886" path="/usr/libexec/sharingd"/>
+            <process name="pgrep" pid="54816" path="Unknown"/>
+            <process name="AegirPoster" pid="52993" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/CoreServices/AegirProxyApp.app/Extensions/AegirPoster.appex/AegirPoster"/>
+            <process name="biomed" pid="52717" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed"/>
+            <process name="pgrep" pid="54826" path="Unknown"/>
+            <process name="Google Chrome Helper (Renderer)" pid="48844" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="ShipIt" pid="3513" path="/Applications/Cursor.app/Contents/Frameworks/Squirrel.framework/Resources/ShipIt"/>
+            <process name="nsurlsessiond" pid="847" path="/usr/libexec/nsurlsessiond"/>
+            <process name="iconservicesagent" pid="53175" path="/System/Library/CoreServices/iconservicesagent"/>
+            <process name="corebrightnessd" pid="471" path="corebrightnessd"/>
+            <process name="remotepairingd" pid="62625" path="/Library/Apple/System/Library/PrivateFrameworks/RemotePairing.framework/Versions/A/XPCServices/remotepairingd.xpc/Contents/MacOS/remotepairingd"/>
+            <process name="assistantd" pid="52705" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AssistantServices.framework/assistantd"/>
+            <process name="MauiAUSP" pid="52977" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/MauiAUSP.appex/MauiAUSP"/>
+            <process name="promotedcontentd" pid="54713" path="/usr/libexec/promotedcontentd"/>
+            <process name="Spotlight" pid="52827" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/Spotlight.app/Spotlight"/>
+            <process name="MercuryPosterExtension" pid="52820" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/MercuryPosterExtension.appex/MercuryPosterExtension"/>
+            <process name="pgrep" pid="54793" path="Unknown"/>
+            <process name="mdworker_shared" pid="54705" path="Unknown"/>
+            <process name="siriactionsd" pid="53043" path="/System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd"/>
+            <process name="xcrun" pid="54744" path="Unknown"/>
+            <process name="securityuploadd" pid="54692" path="Unknown"/>
+            <process name="Xcode" pid="62605" path="/Applications/Xcode.app/Contents/MacOS/Xcode"/>
+            <process name="assistant_cdmd" pid="52852" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ContinuousDialogManagerService.framework/assistant_cdmd"/>
+            <process name="osascript" pid="54831" path="Unknown"/>
+            <process name="pgrep" pid="54814" path="Unknown"/>
+            <process name="Google Chrome Helper (Renderer)" pid="50991" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="coreidvd" pid="52894" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/coreidvd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="58442" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="mapssyncd" pid="54836" path="/System/Library/PrivateFrameworks/MapsSync.framework/mapssyncd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54820" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="Google Chrome Helper" pid="8602" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="PosterBoard" pid="52790" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/PosterBoard.app/PosterBoard"/>
+            <process name="Google Chrome Helper" pid="8601" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="icdd" pid="1293" path="/System/Library/Image Capture/Support/icdd"/>
+            <process name="pgrep" pid="54789" path="Unknown"/>
+            <process name="pgrep" pid="54845" path="Unknown"/>
+            <process name="pgrep" pid="54763" path="Unknown"/>
+            <process name="usernoted" pid="850" path="/usr/sbin/usernoted"/>
+            <process name="logioptionsplus_updater" pid="646" path="logioptionsplus_"/>
+            <process name="pkd" pid="52794" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/pkd"/>
+            <process name="diagnosticd" pid="52904" path="diagnosticd"/>
+            <process name="fileproviderd" pid="911" path="/System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd"/>
+            <process name="Antigravity IDE Helper" pid="1259" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper"/>
+            <process name="audioaccessoryd" pid="28582" path="/System/Library/CoreServices/audioaccessoryd"/>
+            <process name="amsengagementd" pid="54710" path="/System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd"/>
+            <process name="Wispr Flow" pid="1355" path="/Applications/Wispr Flow.app/Contents/Resources/swift-helper-app-dist/Wispr Flow.app/Contents/MacOS/Wispr Flow"/>
+            <process name="clang-stat-cache" pid="54760" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache"/>
+            <process name="SiriAUSP" pid="52969" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/SiriAUSP.appex/SiriAUSP"/>
+            <process name="cloudd" pid="52776" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd"/>
+            <process name="Cursor Helper" pid="3377" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="assetsubscriptiond" pid="53327" path="assetsubscriptio"/>
+            <process name="ContinuityCaptureAgent" pid="924" path="/usr/libexec/ContinuityCaptureAgent"/>
+            <process name="triald" pid="52818" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/triald"/>
+            <process name="geod" pid="52787" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GeoServices.framework/geod"/>
+            <process name="LocalStorageFileProvider" pid="53212" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/FileProvider.framework/PlugIns/LocalStorageFileProvider.appex/LocalStorageFileProvider"/>
+            <process name="gamecontrollerd" pid="53157" path="gamecontrollerd"/>
+            <process name="login" pid="68885" path="login"/>
+            <process name="osascript" pid="54747" path="Unknown"/>
+            <process name="osascript" pid="54815" path="Unknown"/>
+            <process name="locationd" pid="52728" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/locationd"/>
+            <process name="apsd" pid="52762" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ApplePushService.framework/apsd"/>
+            <process name="pgrep" pid="54847" path="Unknown"/>
+            <process name="lldb-rpc-server" pid="68181" path="/Applications/Xcode.app/Contents/SharedFrameworks/LLDBRPC.framework/Resources/lldb-rpc-server"/>
+            <process name="Google Chrome Helper (Renderer)" pid="85249" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="osascript" pid="54801" path="Unknown"/>
+            <process name="dmd" pid="52792" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/dmd"/>
+            <process name="identityservicesd" pid="859" path="/System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd"/>
+            <process name="pgrep" pid="54785" path="Unknown"/>
+            <process name="distnoted" pid="581" path="distnoted"/>
+            <process name="com.apple.cmio.registerassistan" pid="473" path="com.apple.cmio.r"/>
+            <process name="notifyd" pid="469" path="notifyd"/>
+            <process name="Wispr Flow Helper (Renderer)" pid="1356" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper (Renderer).app/Contents/MacOS/Wispr Flow Helper (Renderer)"/>
+            <process name="pgrep" pid="54800" path="Unknown"/>
+            <process name="codex" pid="1236" path="/Applications/ChatGPT.app/Contents/Resources/codex"/>
+            <process name="osascript" pid="54764" path="Unknown"/>
+            <process name="nanoappregistryd" pid="53860" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NanoAppRegistry.framework/Support/nanoappregistryd"/>
+            <process name="findmydeviced" pid="54703" path="findmydeviced"/>
+            <process name="distnoted" pid="977" path="distnoted"/>
+            <process name="distnoted" pid="22777" path="distnoted"/>
+            <process name="UserEventAgent" pid="828" path="/usr/libexec/UserEventAgent"/>
+            <process name="Codex (Renderer)" pid="1238" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Renderer).app/Contents/MacOS/Codex (Renderer)"/>
+            <process name="syspolicyd" pid="534" path="syspolicyd"/>
+            <process name="diskarbitrationd" pid="434" path="diskarbitrationd"/>
+            <process name="proactiveeventtrackerd" pid="54782" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="bluetoothd" pid="468" path="bluetoothd"/>
+            <process name="mediaremoted" pid="52710" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted"/>
+            <process name="videosubscriptionsd" pid="52913" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/videosubscriptionsd"/>
+            <process name="osascript" pid="54862" path="Unknown"/>
+            <process name="storagekitd" pid="54272" path="storagekitd"/>
+            <process name="extensionkitservice" pid="54058" path="/System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/XPCServices/extensionkitservice.xpc/Contents/MacOS/extensionkitservice"/>
+            <process name="bird" pid="53040" path="/System/Library/PrivateFrameworks/iCloudDriveCore.framework/Versions/A/Support/bird"/>
+            <process name="WirelessRadioManagerd" pid="543" path="WirelessRadioMan"/>
+            <process name="storekitd" pid="52918" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/StoreKit.framework/Support/storekitd"/>
+            <process name="mdworker_shared" pid="54859" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"/>
+            <process name="kernel" pid="0" path="/System/Library/Kernels/kernel.release.t8103"/>
+            <process name="contentlinkingd" pid="53220" path="/System/Library/PrivateFrameworks/Synapse.framework/Support/contentlinkingd"/>
+            <process name="PerfPowerServices" pid="26028" path="PerfPowerService"/>
+            <process name="IntelligencePlatformComputeServ" pid="52878" path="/System/Library/PrivateFrameworks/IntelligencePlatformCompute.framework/Versions/A/XPCServices/IntelligencePlatformComputeService.xpc/Contents/MacOS/IntelligencePlatformComputeService"/>
+            <process name="pgrep" pid="54746" path="Unknown"/>
+            <process name="Electron" pid="1091" path="/Applications/Antigravity IDE.app/Contents/MacOS/Electron"/>
+            <process name="MacinTalkAUSP" pid="53033" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MacinTalk.framework/PlugIns/MacinTalkAUSP.appex/MacinTalkAUSP"/>
+            <process name="mlhostd" pid="54809" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="tccd" pid="477" path="tccd"/>
+            <process name="pgrep" pid="54772" path="Unknown"/>
+            <process name="configd" pid="414" path="configd"/>
+            <process name="filecoordinationd" pid="920" path="filecoordination"/>
+            <process name="mdworker_shared" pid="54803" path="Unknown"/>
+            <process name="proactiveeventtrackerd" pid="54828" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="48974" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="replicatord" pid="52094" path="/System/Library/PrivateFrameworks/ReplicatorCore.framework/Support/replicatord"/>
+            <process name="distnoted" pid="550" path="distnoted"/>
+            <process name="fontd" pid="980" path="/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd"/>
+            <process name="cloudd" pid="42856" path="/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd"/>
+            <process name="ChatGPT for Chrome" pid="50971" path="/Users/REDACTED_USER/.codex/plugins/cache/openai-bundled/chrome/latest/extension-host/macos/arm64/ChatGPT for Chrome"/>
+            <process name="configd_sim" pid="52741" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/configd_sim"/>
+            <process name="GeneralMapsWidget" pid="53216" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/Maps.app/PlugIns/GeneralMapsWidget.appex/GeneralMapsWidget"/>
+            <process name="com.apple.CallKit.CallDirectoryM" pid="52839" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CallKit.framework/XPCServices/com.apple.CallKit.CallDirectoryMaintenance.xpc/com.apple.CallKit.CallDirectoryMaintenance"/>
+            <process name="Google Chrome Helper (Renderer)" pid="77334" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="Terminal" pid="1101" path="/System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal"/>
+            <process name="GSSCred" pid="51396" path="GSSCred"/>
+            <process name="PridePosterExtension" pid="53001" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/PridePosterApp.app/Extensions/PridePosterExtension.appex/PridePosterExtension"/>
+            <process name="feedbackd" pid="52933" path="/usr/libexec/feedbackd"/>
+            <process name="financed" pid="52834" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/FinanceKit.framework/financed"/>
+            <process name="bulletindistributord" pid="53063" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/bulletindistributord"/>
+            <process name="distnoted" pid="1746" path="distnoted"/>
+            <process name="systemstats" pid="410" path="systemstats"/>
+            <process name="xctrace" pid="54725" path="/Applications/Xcode.app/Contents/Developer/usr/bin/xctrace"/>
+            <process name="KonaSynthesizer" pid="53030" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/KonaSynthesizer.appex/KonaSynthesizer"/>
+            <process name="powerd" pid="416" path="powerd"/>
+            <process name="osascript" pid="54788" path="Unknown"/>
+            <process name="AirPlayUIAgent" pid="1302" path="/System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent"/>
+            <process name="managedappdistributiond" pid="54762" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="proactiveeventtrackerd" pid="54812" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="osascript" pid="54806" path="Unknown"/>
+            <process name="taskgated" pid="22666" path="taskgated"/>
+            <process name="diagnosticd" pid="52755" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/diagnosticd"/>
+            <process name="UserEventAgent" pid="52702" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/UserEventAgent"/>
+            <process name="pgrep" pid="54849" path="Unknown"/>
+            <process name="sysmond" pid="1579" path="sysmond"/>
+            <process name="securityd" pid="448" path="securityd"/>
+            <process name="adid" pid="52239" path="adid"/>
+            <process name="coresymbolicationd" pid="53971" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd"/>
+            <process name="corespotlightd" pid="952" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd"/>
+            <process name="liveactivitiesd" pid="52774" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SessionCore.framework/Support/liveactivitiesd"/>
+            <process name="heard" pid="51115" path="/System/Library/PrivateFrameworks/HearingCore.framework/heard"/>
+            <process name="nsurlsessiond" pid="52769" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/nsurlsessiond"/>
+            <process name="maild" pid="52851" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/EmailDaemon.framework/maild"/>
+            <process name="mdworker_shared" pid="54804" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"/>
+            <process name="pgrep" pid="54853" path="Unknown"/>
+            <process name="mdworker_shared" pid="54802" path="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared"/>
+            <process name="IMDPersistenceAgent" pid="54736" path="/System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent"/>
+            <process name="osascript" pid="54794" path="Unknown"/>
+            <process name="pgrep" pid="54830" path="Unknown"/>
+            <process name="geocorrectiond" pid="53310" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MapsSupport.framework/geocorrectiond"/>
+            <process name="chronod" pid="990" path="/System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod"/>
+            <process name="proactived" pid="52760" path="/usr/libexec/proactived"/>
+            <process name="CoreSimulatorBridge" pid="52734" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Resources/Platforms/iphoneos/usr/libexec/CoreSimulatorBridge"/>
+            <process name="Antigravity IDE Helper" pid="1217" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper"/>
+            <process name="Cursor Helper" pid="3304" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="triald" pid="54066" path="/usr/libexec/triald"/>
+            <process name="osascript" pid="54771" path="Unknown"/>
+            <process name="diagnostics_agent" pid="1051" path="/System/Library/CoreServices/diagnostics_agent"/>
+            <process name="companionappd" pid="53062" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/WatchKit.framework/Support/companionappd"/>
+            <process name="spotlightknowledged.updater" pid="52885" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/spotlightknowledged.updater"/>
+            <process name="modelmanagerd" pid="52900" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/modelmanagerd"/>
+            <process name="proactiveeventtrackerd" pid="54841" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="AmbientPhotoFramePosterProvider" pid="52986" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/AmbientPhotoFramePosterProvider.appex/AmbientPhotoFramePosterProvider"/>
+            <process name="backupd-helper" pid="54286" path="backupd-helper"/>
+            <process name="xcodebuild" pid="54740" path="Unknown"/>
+            <process name="SimAudioProcessorService" pid="65026" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimAudioProcessorServices.simdeviceio/Contents/XPCServices/SimAudioProcessorService.xpc/Contents/MacOS/SimAudioProcessorService"/>
+            <process name="pgrep" pid="54738" path="Unknown"/>
+            <process name="locationd" pid="450" path="locationd"/>
+            <process name="duetexpertd" pid="47646" path="/usr/libexec/duetexpertd"/>
+            <process name="backboardd" pid="52725" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/backboardd"/>
+            <process name="mds_stores" pid="753" path="mds_stores"/>
+            <process name="distnoted" pid="530" path="distnoted"/>
+            <process name="modelmanagerd" pid="556" path="modelmanagerd"/>
+            <process name="ibtool" pid="54748" path="/Applications/Xcode.app/Contents/Developer/usr/bin/ibtool"/>
+            <process name="axassetsd" pid="53094" path="/System/Library/PrivateFrameworks/AXAssetLoader.framework/Support/axassetsd"/>
+            <process name="distnoted" pid="791" path="distnoted"/>
+            <process name="osascript" pid="54778" path="Unknown"/>
+            <process name="com.apple.dt.SKAgent" pid="62667" path="/Applications/Xcode.app/Contents/SharedFrameworks/SourceKit.framework/Versions/A/XPCServices/com.apple.dt.SKAgent.xpc/Contents/MacOS/com.apple.dt.SKAgent"/>
+            <process name="lsd" pid="842" path="/usr/libexec/lsd"/>
+            <process name="installcoordinationd" pid="52837" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordinationd"/>
+            <process name="xprotectd" pid="442" path="xprotectd"/>
+            <process name="distnoted" pid="514" path="distnoted"/>
+            <process name="watchdogd" pid="427" path="watchdogd"/>
+            <process name="SubmitDiagInfo" pid="1739" path="SubmitDiagInfo"/>
+            <process name="pkd" pid="46960" path="/usr/libexec/pkd"/>
+            <process name="secinitd" pid="42773" path="/usr/libexec/secinitd"/>
+            <process name="imagent" pid="898" path="/System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent"/>
+            <process name="facetimemessagestored" pid="54813" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="ReportMemoryException" pid="54641" path="Unknown"/>
+            <process name="osascript" pid="54835" path="Unknown"/>
+            <process name="pgrep" pid="54798" path="Unknown"/>
+            <process name="extensionkitservice" pid="53211" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ExtensionFoundation.framework/XPCServices/extensionkitservice.xpc/extensionkitservice"/>
+            <process name="com.muse.authservice" pid="645" path="com.muse.authser"/>
+            <process name="dasd" pid="52730" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/dasd"/>
+            <process name="notifyd" pid="52742" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/sbin/notifyd"/>
+            <process name="Codex (Service)" pid="1207" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/151.0.7922.174/Helpers/Codex (Service).app/Contents/MacOS/Codex (Service)"/>
+            <process name="nsurlsessiond" pid="541" path="nsurlsessiond"/>
+            <process name="replayd" pid="53101" path="/usr/libexec/replayd"/>
+            <process name="mobileassetd" pid="52800" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mobileassetd"/>
+            <process name="thermalmonitord" pid="440" path="thermalmonitord"/>
+            <process name="routined" pid="52711" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/routined"/>
+            <process name="Wispr Flow Helper" pid="1253" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper.app/Contents/MacOS/Wispr Flow Helper"/>
+            <process name="Google Chrome Helper" pid="1196" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="osascript" pid="54846" path="Unknown"/>
+            <process name="logioptionsplus_agent" pid="1300" path="/Library/Application Support/Logitech.localized/LogiOptionsPlus/logioptionsplus_agent.app/Contents/MacOS/logioptionsplus_agent"/>
+            <process name="osascript" pid="54833" path="Unknown"/>
+            <process name="coreauthd" pid="28500" path="/System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd"/>
+            <process name="biomesyncd" pid="52841" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/biomesyncd"/>
+            <process name="proactiveeventtrackerd" pid="54795" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/proactiveeventtrackerd"/>
+            <process name="managedappdistributiond" pid="54852" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="audioanalyticsd" pid="52757" path="audioanalyticsd"/>
+            <process name="com.apple.dt.instruments.dtarbit" pid="54769" path="Unknown"/>
+            <process name="simdiskimaged" pid="1283" path="simdiskimaged"/>
+            <process name="wifip2pd" pid="33137" path="wifip2pd"/>
+            <process name="remindd" pid="52235" path="/usr/libexec/remindd"/>
+            <process name="eligibilityd" pid="512" path="eligibilityd"/>
+            <process name="com.apple.geod" pid="52165" path="/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod"/>
+            <process name="itunesstored" pid="52917" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/iTunesStore.framework/Support/itunesstored"/>
+            <process name="gamepolicyd" pid="802" path="gamepolicyd"/>
+            <process name="facetimemessagestored" pid="54842" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="facetimemessagestored" pid="54796" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="Google Chrome Helper (Renderer)" pid="51887" path="Unknown"/>
+            <process name="ThemeWidgetControlViewService" pid="8488" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService"/>
+            <process name="contactsd" pid="52163" path="/System/Library/Frameworks/Contacts.framework/Support/contactsd"/>
+            <process name="swtransparencyd" pid="53135" path="/usr/libexec/swtransparencyd"/>
+            <process name="managedappdistributiond" pid="54810" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="amsengagementd" pid="52898" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd"/>
+            <process name="containermanagerd" pid="52772" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/containermanagerd"/>
+            <process name="mobiletimerd" pid="53053" path="/System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd"/>
+            <process name="distnoted" pid="1172" path="distnoted"/>
+            <process name="osascript" pid="54817" path="Unknown"/>
+            <process name="bash" pid="54584" path="/bin/bash"/>
+            <process name="maild" pid="52935" path="/System/Library/PrivateFrameworks/EmailDaemon.framework/Versions/A/maild"/>
+            <process name="nfcd" pid="53083" path="nfcd"/>
+            <process name="assistantd" pid="17972" path="/System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd"/>
+            <process name="textunderstandingd" pid="52860" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/textunderstandingd"/>
+            <process name="SimRenderServer" pid="52695" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimRenderServer.xpc/Contents/MacOS/SimRenderServer"/>
+            <process name="WeatherPoster" pid="53004" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/WeatherPosterApp.app/Extensions/WeatherPoster.appex/WeatherPoster"/>
+            <process name="coreduetd" pid="52252" path="coreduetd"/>
+            <process name="chrome_crashpad_handler" pid="1186" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/chrome_crashpad_handler"/>
+            <process name="passd" pid="52733" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/PassKitCore.framework/passd"/>
+            <process name="distnoted" pid="622" path="distnoted"/>
+            <process name="syncdefaultsd" pid="28483" path="/System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd"/>
+            <process name="com.apple.SafariPlatformSupport" pid="3392" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper"/>
+            <process name="syncdefaultsd" pid="52793" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd"/>
+            <process name="callservicesd" pid="52785" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd"/>
+            <process name="testmanagerd" pid="53843" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/testmanagerd"/>
+            <process name="mediaremoted" pid="407" path="mediaremoted"/>
+            <process name="distnoted" pid="26087" path="distnoted"/>
+            <process name="com.apple.MobileInstallationHelp" pid="52858" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MobileInstallation.framework/XPCServices/com.apple.MobileInstallationHelperService.xpc/com.apple.MobileInstallationHelperService"/>
+            <process name="logd" pid="402" path="logd"/>
+            <process name="MercuryPosterExtension" pid="52989" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/MercuryPosterExtension.appex/MercuryPosterExtension"/>
+            <process name="facetimemessagestored" pid="54766" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="osascript" pid="54854" path="Unknown"/>
+            <process name="ExtragalacticPoster" pid="52988" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/UnityPosterApp.app/Extensions/ExtragalacticPoster.appex/ExtragalacticPoster"/>
+            <process name="healthd" pid="52713" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/HealthKit.framework/healthd"/>
+            <process name="neagent" pid="53096" path="/usr/libexec/neagent"/>
+            <process name="managedappdistributiond" pid="54792" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="mlhostd" pid="54824" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/mlhostd"/>
+            <process name="NFStorageServer" pid="53084" path="NFStorageServer"/>
+            <process name="facetimemessagestored" pid="54829" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored"/>
+            <process name="trustd" pid="876" path="/usr/libexec/trustd"/>
+            <process name="remoted" pid="421" path="remoted"/>
+            <process name="clang" pid="54754" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"/>
+            <process name="Dock" pid="1102" path="/System/Library/CoreServices/Dock.app/Contents/MacOS/Dock"/>
+            <process name="UnityPoster" pid="53000" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/UnityPosterApp.app/Extensions/UnityPoster.appex/UnityPoster"/>
+            <process name="com.apple.geod" pid="52170" path="com.apple.geod"/>
+            <process name="MetricMeasurementHelper" pid="54797" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MetricMeasurement.framework/XPCServices/MetricMeasurementHelper.xpc/MetricMeasurementHelper"/>
+            <process name="fseventsd" pid="406" path="fseventsd"/>
+            <process name="accountsd" pid="52709" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accounts.framework/accountsd"/>
+            <process name="tailspind" pid="54304" path="tailspind"/>
+            <process name="networkserviceproxy" pid="53131" path="/usr/libexec/networkserviceproxy"/>
+            <process name="llvm-profdata" pid="54863" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/llvm-profdata"/>
+            <process name="MTLCompilerService" pid="54327" path="/System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService"/>
+            <process name="cfprefsd" pid="52759" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/sbin/cfprefsd"/>
+            <process name="gamecontrollerd" pid="52770" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/gamecontrollerd"/>
+            <process name="ClockPosterExtension" pid="52990" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/ExtensionKit/Extensions/ClockPosterExtension.appex/ClockPosterExtension"/>
+            <process name="SkyComputerUseService" pid="1384" path="/Users/REDACTED_USER/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService"/>
+            <process name="accountsd" pid="830" path="/System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd"/>
+            <process name="cdpd" pid="54722" path="/System/Library/PrivateFrameworks/CoreCDP.framework/Versions/A/Resources/cdpd"/>
+            <process name="ViewBridgeAuxiliary" pid="1001" path="/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary"/>
+            <process name="SimLaunchHost.arm64" pid="1723" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimLaunchHost.arm64.xpc/Contents/MacOS/SimLaunchHost.arm64"/>
+            <process name="com.apple.SafariPlatformSupport" pid="15331" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper"/>
+            <process name="parsec-fbf" pid="52930" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf"/>
+            <process name="cfprefsd" pid="479" path="cfprefsd"/>
+            <process name="audioclocksyncd" pid="542" path="audioclocksyncd"/>
+            <process name="PowerUIAgent" pid="53290" path="PowerUIAgent"/>
+            <process name="extensionkitservice" pid="52797" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ExtensionFoundation.framework/XPCServices/extensionkitservice.xpc/extensionkitservice"/>
+            <process name="timed" pid="446" path="timed"/>
+            <process name="Cursor Helper" pid="18391" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="UsageTrackingAgent" pid="34147" path="/System/Library/PrivateFrameworks/UsageTracking.framework/Versions/A/UsageTrackingAgent"/>
+            <process name="ChatGPT" pid="1088" path="/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"/>
+            <process name="logd" pid="52704" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/logd"/>
+            <process name="gamecontrolleragentd" pid="53158" path="/usr/libexec/gamecontrolleragentd"/>
+            <process name="fileproviderd" pid="52905" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/FileProvider.framework/Support/fileproviderd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="58537" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="Simulator" pid="52720" path="/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator"/>
+            <process name="securityd" pid="52765" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/securityd"/>
+            <process name="Android File Transfer Agent" pid="1309" path="/Users/REDACTED_USER/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app/Contents/MacOS/Android File Transfer Agent"/>
+            <process name="syslogd" pid="438" path="syslogd"/>
+            <process name="profiled" pid="52780" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/profiled"/>
+            <process name="searchpartyd" pid="595" path="searchpartyd"/>
+            <process name="AMPDeviceDiscoveryAgent" pid="1112" path="/System/Library/PrivateFrameworks/AMPDevices.framework/Versions/A/Support/AMPDeviceDiscoveryAgent"/>
+            <process name="Antigravity IDE Helper" pid="1265" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper.app/Contents/MacOS/Antigravity IDE Helper"/>
+            <process name="milod" pid="1108" path="/usr/libexec/milod"/>
+            <process name="InputUI" pid="54053" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/InputUI.app/InputUI"/>
+            <process name="Antigravity IDE Helper (Plugin)" pid="1260" path="/Applications/Antigravity IDE.app/Contents/Frameworks/Antigravity IDE Helper (Plugin).app/Contents/MacOS/Antigravity IDE Helper (Plugin)"/>
+            <process name="webbookmarksd" pid="52804" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Cryptexes/App/usr/libexec/webbookmarksd"/>
+            <process name="mdworker_shared" pid="54721" path="Unknown"/>
+            <process name="TrustedPeersHelper" pid="54697" path="/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/TrustedPeersHelper.xpc/Contents/MacOS/TrustedPeersHelper"/>
+            <process name="useractivityd" pid="1017" path="/System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd"/>
+            <process name="launchservicesd" pid="445" path="launchservicesd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="62580" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="donotdisturbd" pid="52873" path="/System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd"/>
+            <process name="deleted" pid="54281" path="/System/Library/PrivateFrameworks/CacheDelete.framework/deleted"/>
+            <process name="secd" pid="822" path="/usr/libexec/secd"/>
+            <process name="WindowServer" pid="476" path="WindowServer"/>
+            <process name="containermanagerd_system" pid="52763" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/containermanagerd_system"/>
+            <process name="ControlCenter" pid="958" path="/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter"/>
+            <process name="SimMetalHost (iPhone 17 Pro: def" pid="52696" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost"/>
+            <process name="swift-frontend" pid="54750" path="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend"/>
+            <process name="biomesyncd" pid="54693" path="Unknown"/>
+            <process name="osascript" pid="54827" path="Unknown"/>
+            <process name="logi_crashpad_handler" pid="1428" path="/Library/Application Support/Logitech.localized/LogiOptionsPlus/logioptionsplus_agent.app/Contents/MacOS/logi_crashpad_handler"/>
+            <process name="osascript" pid="54808" path="Unknown"/>
+            <process name="pgrep" pid="54843" path="Unknown"/>
+            <process name="iconservicesagent" pid="52807" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/CoreServices/iconservicesagent"/>
+            <process name="News App" pid="54776" path="/Users/REDACTED_USER/Library/Developer/CoreSimulator/Devices/132DFFD9-982A-49B6-8851-40802CABA34B/data/Containers/Bundle/Application/7B187F0B-554B-4950-AC3D-EE2128A98B07/News App.app/News App"/>
+            <process name="mobileassetd" pid="49249" path="mobileassetd"/>
+            <process name="FamilyControlsAgent" pid="52919" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/FamilyControls.framework/FamilyControlsAgent"/>
+            <process name="cloudd" pid="54287" path="cloudd"/>
+            <process name="jetpackassetd" pid="52890" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/JetCore.framework/Support/jetpackassetd"/>
+            <process name="containermanagerd_system" pid="52176" path="containermanager"/>
+            <process name="SimMetalHost (iPhone 17 Pro: sys" pid="52697" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/Resources/SimRenderingServices.simdeviceio/Contents/XPCServices/SimMetalHost.xpc/Contents/MacOS/SimMetalHost"/>
+            <process name="BiomeAgent" pid="840" path="/System/Library/PrivateFrameworks/BiomeStreams.framework/Support/BiomeAgent"/>
+            <process name="appleh13camerad" pid="569" path="appleh13camerad"/>
+            <process name="amsaccountsd" pid="52740" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleMediaServices.framework/amsaccountsd"/>
+            <process name="osascript" pid="54790" path="Unknown"/>
+            <process name="Google Chrome Helper" pid="1200" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper"/>
+            <process name="Cursor Helper" pid="3341" path="/Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper"/>
+            <process name="SetStoreUpdateService" pid="52949" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CascadeSets.framework/XPCServices/SetStoreUpdateService.xpc/SetStoreUpdateService"/>
+            <process name="mobiletimerd" pid="52718" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd"/>
+            <process name="Wispr Flow Helper" pid="1364" path="/Applications/Wispr Flow.app/Contents/Frameworks/Wispr Flow Helper.app/Contents/MacOS/Wispr Flow Helper"/>
+            <process name="pgrep" pid="54807" path="Unknown"/>
+            <process name="nehelper" pid="53074" path="nehelper"/>
+            <process name="com.apple.WebKit.Networking" pid="65506" path="/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking"/>
+            <process name="ctkd" pid="807" path="ctkd"/>
+            <process name="backupd" pid="564" path="backupd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="50827" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+            <process name="rapportd" pid="849" path="/usr/libexec/rapportd"/>
+            <process name="fitcored" pid="52943" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SeymourServices.framework/fitcored"/>
+            <process name="netbiosd" pid="83274" path="netbiosd"/>
+            <process name="applekeystored" pid="53697" path="applekeystored"/>
+            <process name="AssetCacheTetheratorService" pid="54291" path="AssetCacheTether"/>
+            <process name="suggestd" pid="52224" path="/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd"/>
+            <process name="osascript" pid="54858" path="Unknown"/>
+            <process name="fairplaydeviceidentityd" pid="54714" path="fairplaydeviceid"/>
+            <process name="pboard" pid="838" path="/usr/libexec/pboard"/>
+            <process name="calaccessd" pid="52806" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd"/>
+            <process name="distnoted" pid="518" path="distnoted"/>
+            <process name="pgrep" pid="54861" path="Unknown"/>
+            <process name="com.apple.CloudDocs.iCloudDriveF" pid="1066" path="/System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.iCloudDriveFileProvider.appex/Contents/MacOS/com.apple.CloudDocs.iCloudDriveFileProvider"/>
+            <process name="trustd" pid="483" path="trustd"/>
+            <process name="NewsToday2" pid="53889" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/Applications/News.app/PlugIns/NewsToday2.appex/NewsToday2"/>
+            <process name="com.apple.Safari.SafeBrowsing.S" pid="53424" path="/System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service"/>
+            <process name="distnoted" pid="764" path="distnoted"/>
+            <process name="searchd" pid="52801" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/Search.framework/searchd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="54669" path="Unknown"/>
+            <process name="akd" pid="872" path="/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd"/>
+            <process name="remoting_me2me_host" pid="1609" path="/Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_me2me_host"/>
+            <process name="SimulatorTrampoline" pid="62629" path="/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/XPCServices/SimulatorTrampoline.xpc/Contents/MacOS/SimulatorTrampoline"/>
+            <process name="managedappdistributiond" pid="54840" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond"/>
+            <process name="proactiveeventtrackerd" pid="54757" path="/usr/libexec/proactiveeventtrackerd"/>
+            <process name="distnoted" pid="954" path="distnoted"/>
+            <process name="logind" pid="462" path="logind"/>
+            <process name="adprivacyd" pid="52848" path="/Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/usr/libexec/adprivacyd"/>
+            <process name="Google Chrome Helper (Renderer)" pid="48984" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/151.0.7922.174/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)"/>
+        </processes>
+        <data>
+            <table schema="tick" frequency="10" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms."/>
+            <table schema="life-cycle-period" target-pid="ALL" documentation="Identifies where an application is in its lifecycle."/>
+            <table schema="tick" frequency="1" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms."/>
+            <table schema="device-thermal-state-intervals" documentation="Denotes the current thermal state of the device."/>
+            <table category="PointsOfInterest" schema="os-log" documentation="Holds a message from the OS's Unified Logging and Tracing component."/>
+            <table enable-priority-inversion-detection="0" target-pid="ALL" message-type="Fault" schema="os-log" category="&quot;Hang Risk&quot; &quot;Severe Hang Risk&quot; CFNetwork Contacts CoreML" subsystem="&quot;com.apple.runtime-issues&quot;" documentation="Holds a message from the OS's Unified Logging and Tracing component."/>
+            <table schema="os-signpost" category="InduceCondition" subsystem="&quot;com.apple.ConditionInducer.LowSeverity&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component."/>
+            <table schema="os-signpost" dynamic-tracing-enabled-subsystems="&quot;com.apple.neappprivacy&quot;" category="PointsOfInterest" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component."/>
+            <table schema="hang-risks" detect-priority-inversions="0" target-pid="ALL"/>
+            <table target-pid="ALL" schema="potential-hangs" hangs-threshold="250"/>
+            <table target-pid="ALL" schema="global-poi-layout" exclude-os-logs="0" documentation="A point of interest that can be laid out on a graph view."/>
+            <table schema="kdebug-signpost" target-pid="ALL" documentation="Marks a point in time denoted by a special type of kdebug trace."/>
+            <table target-pid="ALL" context-switch-sampling="0" high-frequency-sampling="0" schema="time-profile" needs-kernel-callstack="0" record-waiting-threads="0" documentation="When combined with other time-profile samples, creates a statistical picture of where your application is spending its time."/>
+            <table codes="&quot;0x1f,0x05&quot;" target="ALL" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points."/>
+            <table schema="process-info" documentation="Associates processes with their process names."/>
+            <table schema="dyld-library-load" target-pid="ALL"/>
+            <table codes="&quot;33,0x11&quot;" target="ALL" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points."/>
+            <table codes="&quot;0x2b,0x65&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;46,2&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table exclude-os-logs="0" schema="region-of-interest" target-pid="ALL" documentation="Determined by the modelers and represent a focus area that the developer is likely to be intereseted in."/>
+            <table codes="&quot;0x2d,*&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x2b,0xdc&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x07,0x00&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x07,0x00&quot; &quot;0x1f,0x05&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x1,0xa&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x21,0xa&quot;" schema="kdebug" callstack="user" target="ALL" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x1f,0x7&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x31,0xca&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;33,0x11&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x2b,0xd8&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x2b,0x87&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table codes="&quot;0x1,0x25&quot;" target="ALL" schema="kdebug" documentation="Tracing the kernel and some system frameworks."/>
+            <table schema="global-roi-layout" target-pid="ALL" documentation="Layout information for graphing regions of interest."/>
+            <table category="PointsOfInterest" schema="os-log-arg" documentation="Holds a metadata argument from the OS's Unified Logging and Tracing component."/>
+            <table schema="gcd-perf-event" target-pid="ALL" documentation="Find sub-optimal uses of Grand Central Dispatch."/>
+            <table schema="thread-info" documentation="Associates threads with their owning process."/>
+            <table schema="runloop-events" target-pid="ALL"/>
+            <table target-pid="ALL" schema="roi-metadata" exclude-os-logs="0" documentation="Describes details about a given region of interest."/>
+            <table category="PointsOfInterest" schema="os-signpost-arg" documentation="Holds a signpost metadata argument from the OS's Unified Logging and Tracing component."/>
+            <table sample-rate-micro-seconds="1000" target="ALL" schema="time-sample" callstack="user" all-thread-states="NO" documentation="Holds a raw CPU profiling sample."/>
+        </data>
+        <tracks/>
+    </run>
+</trace-toc>

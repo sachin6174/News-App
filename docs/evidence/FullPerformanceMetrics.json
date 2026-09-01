@@ -1,0 +1,76 @@
+[
+  {
+    "testIdentifier" : "NewsPerformanceUITests/testLaunchPerformance()",
+    "testIdentifierURL" : "test://com.apple.xcode/News%20App/News%20AppUITests/NewsPerformanceUITests/testLaunchPerformance",
+    "testRuns" : [
+      {
+        "device" : {
+          "deviceId" : "132DFFD9-982A-49B6-8851-40802CABA34B",
+          "deviceName" : "iPhone 17 Pro"
+        },
+        "metrics" : [
+          {
+            "baselineAverage" : 0,
+            "baselineName" : "",
+            "displayName" : "Duration (ApplicationFirstFramePresentationResponsive)",
+            "identifier" : "com.apple.dt.XCTMetric_ApplicationLaunch-ApplicationFirstFramePresentationResponsive.duration",
+            "maxPercentRegression" : 10,
+            "maxPercentRelativeStandardDeviation" : 10,
+            "maxRegression" : 0,
+            "maxStandardDeviation" : 10,
+            "measurements" : [
+              2.625965459,
+              3.9883588750000003,
+              2.9391425,
+              2.6481030000000003,
+              2.249448541
+            ],
+            "polarity" : "prefers smaller",
+            "unitOfMeasurement" : "s"
+          }
+        ],
+        "testPlanConfiguration" : {
+          "configurationId" : "1",
+          "configurationName" : "Test Scheme Action"
+        }
+      }
+    ]
+  },
+  {
+    "testIdentifier" : "NewsPerformanceUITests/testScrollingPerformance()",
+    "testIdentifierURL" : "test://com.apple.xcode/News%20App/News%20AppUITests/NewsPerformanceUITests/testScrollingPerformance",
+    "testRuns" : [
+      {
+        "device" : {
+          "deviceId" : "132DFFD9-982A-49B6-8851-40802CABA34B",
+          "deviceName" : "iPhone 17 Pro"
+        },
+        "metrics" : [
+          {
+            "baselineAverage" : 0,
+            "baselineName" : "",
+            "displayName" : "Duration (Scroll_DraggingAndDeceleration)",
+            "identifier" : "com.apple.dt.XCTMetric_OSSignpost-Scroll_DraggingAndDeceleration.duration",
+            "maxPercentRegression" : 10,
+            "maxPercentRelativeStandardDeviation" : 10,
+            "maxRegression" : 0,
+            "maxStandardDeviation" : 10,
+            "measurements" : [
+              2.5830810840000002,
+              2.570009708,
+              2.5676067500000004,
+              2.4659304580000003,
+              2.5672052080000003
+            ],
+            "polarity" : "prefers smaller",
+            "unitOfMeasurement" : "s"
+          }
+        ],
+        "testPlanConfiguration" : {
+          "configurationId" : "1",
+          "configurationName" : "Test Scheme Action"
+        }
+      }
+    ]
+  }
+]

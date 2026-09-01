@@ -50,13 +50,36 @@ and after. `NewsListViewController`, hosting controllers, cells, URLSession task
 and decoded images should return to a stable plateau. A cache may retain bounded
 images by design; continuous unbounded growth is not acceptable.
 
-## Results record
+## Verified simulator result
 
-Fill this table only from saved evidence:
+The branch was measured at commit `f08a9a57b8963a5ac0790d455062f9b8d0c713ba`
+with Xcode 26.6 on an Apple-silicon Mac and an iPhone 17 Pro simulator running
+iOS 26.5. Xcode 26.6 does not support the Network Connections or Animation
+Hitches instruments when directly targeting this simulator, so the repeatable
+script records the simulator's host processes with Time Profiler and Network.
+The app's own XCTest signpost metric supplies the scrolling regression number.
 
-| Commit / device | Cold launch median / p95 | Warm launch median / p95 | Scroll hitches | Peak memory | Leaks | Trace link |
-|---|---:|---:|---:|---:|---:|---|
-| Not measured in this Windows environment | — | — | — | — | — | Run on macOS/device |
+| Evidence | Result |
+|---|---|
+| Full test suite | 17 passed, 0 failed, 0 skipped |
+| Repeat launch duration | Median 2.648 s; five samples; maximum 3.988 s |
+| Scroll drag/deceleration duration | Median 2.568 s across five measured gestures; this is duration, not a hitch count |
+| Memory footprint | 21.9 MiB captured; 22.8 MiB peak |
+| Leak scan | 0 leaks / 0 bytes reported; simulator security limited the scan to readable memory |
+| Static analyzer | Passed |
+| Release simulator build | Passed; app bundle 1,478,656 bytes |
+
+The small review artifacts are in [evidence](evidence), including the
+[launch trace manifest](evidence/Launch-toc.xml),
+[scrolling trace manifest](evidence/Scrolling-toc.xml),
+[network trace manifest](evidence/Networking-toc.xml), and
+[raw XCTest performance metrics](evidence/FullPerformanceMetrics.json). The
+large binary `.trace` packages remain in the temporary Mac verification checkout
+instead of bloating Git.
+
+Run `scripts/collect-mac-instruments-evidence.sh` from the Mac checkout to repeat
+the simulator capture. A physical-device pass is still recommended before making
+claims about real-user cold launch, thermal behavior, radio networking, or memory.
 
 If a code change is made after profiling, repeat the same scenarios. Old trace
 numbers are not evidence for a different binary.
