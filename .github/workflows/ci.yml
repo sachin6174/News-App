@@ -1,0 +1,57 @@
+name: iOS CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, master, "codex/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: ios-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-15
+    timeout-minutes: 35
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Scan checked-out source for secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Show selected Xcode
+        run: xcodebuild -version
+
+      - name: Build, run unit/integration/UI tests, and collect performance metrics
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project "News App.xcodeproj" \
+            -scheme "News App" \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=latest" \
+            -resultBundlePath TestResults.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            NEWS_API_KEY=ci-placeholder-token
+
+      - name: Run Xcode static analyzer
+        run: |
+          xcodebuild analyze \
+            -project "News App.xcodeproj" \
+            -scheme "News App" \
+            -destination "generic/platform=iOS Simulator" \
+            CODE_SIGNING_ALLOWED=NO \
+            NEWS_API_KEY=ci-placeholder-token
+
+      - name: Keep test, accessibility, and performance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: TestResults.xcresult
+          if-no-files-found: ignore

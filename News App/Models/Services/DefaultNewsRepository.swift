@@ -6,54 +6,35 @@
 import Foundation
 
 final class DefaultNewsRepository: NewsRepository {
-    private let api: APIService
+    private let api: NewsAPIService
     private let store: DataStoreManager
 
-    init(api: APIService = .shared, store: DataStoreManager = .shared) {
+    init(api: NewsAPIService = NewsAPIService(), store: DataStoreManager = .shared) {
         self.api = api
         self.store = store
     }
 
-    func fetchTopHeadlines() async throws -> [Article] {
-        try await withCheckedThrowingContinuation { continuation in
-            api.request(
-                endpoint: AppConstants.baseURL,
-                queryItems: [
-                    URLQueryItem(name: "country", value: "us"),
-                    URLQueryItem(name: "category", value: "business")
-                ],
-                responseType: NewsResponse.self
-            ) { [store] result in
-                switch result {
-                case .success(let response):
-                    store.replaceCachedArticles(with: response.articles)
-                    continuation.resume(returning: response.articles)
-                case .failure(let error):
-                    continuation.resume(throwing: error)
-                }
-            }
-        }
+    /// Gets a page from the server, then saves it before returning it to the UI.
+    func fetchHeadlines(page: Int, pageSize: Int) async throws -> NewsPage {
+        let response = try await api.fetchHeadlines(page: page, pageSize: pageSize)
+        try await store.storeCached(response.articles, page: page)
+        return NewsPage(
+            articles: response.articles,
+            page: page,
+            totalResults: response.totalResults
+        )
     }
 
-    func cachedHeadlines() -> [Article] {
-        store.fetchCachedArticles()
+    func cachedHeadlines() async -> [Article] {
+        await store.fetchCachedArticles()
     }
 
-    func bookmarks() -> [Article] {
-        store.fetchBookmarkedArticles()
+    func bookmarks() async -> [Article] {
+        await store.fetchBookmarkedArticles()
     }
 
-    func toggleBookmark(_ article: Article) {
-        if isBookmarked(article) {
-            store.removeBookmark(for: article)
-        } else {
-            store.saveBookmark(for: article)
-        }
-    }
-
-    func isBookmarked(_ article: Article) -> Bool {
-        // simple check based on url or title
-        bookmarks().contains { $0.url == article.url || $0.title == article.title }
+    func setBookmarked(_ isBookmarked: Bool, article: Article) async {
+        await store.setBookmarked(isBookmarked, article: article)
     }
 }
 
