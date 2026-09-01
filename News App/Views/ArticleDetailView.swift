@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// This SwiftUI screen is hosted inside the UIKit navigation controller. It is a
 /// small, practical example of adopting SwiftUI without rewriting the whole app.
