@@ -11,7 +11,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  repository-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Validate tracked source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check HEAD^
+          if git grep -n -I -E '(github_pat_|x-access-token:|api(Key|_key)[[:space:]]*=[[:space:]]*"[A-Za-z0-9_-]{20,}")'; then
+            echo "A credential-shaped value was found in tracked source."
+            exit 1
+          fi
+          test ! -e Config/Secrets.xcconfig
+          test ! -e "News App/App/AppConstants.swift"
+          test ! -e "News App/Views/Main.storyboard"
+
   test:
+    needs: repository-audit
     runs-on: macos-latest
     timeout-minutes: 35
     steps:
