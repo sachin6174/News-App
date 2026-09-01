@@ -78,6 +78,10 @@ final class NewsArticleCell: UITableViewCell {
         sourceLabel.font = .preferredFont(forTextStyle: .caption1)
         sourceLabel.adjustsFontForContentSizeCategory = true
         sourceLabel.textColor = .secondaryLabel
+        // Publisher names can be long. Unlimited lines prevent truncation both in
+        // translated text and at the largest accessibility Dynamic Type settings.
+        sourceLabel.numberOfLines = 0
+        sourceLabel.lineBreakMode = .byWordWrapping
 
         titleLabel.font = .preferredFont(forTextStyle: .headline)
         titleLabel.adjustsFontForContentSizeCategory = true

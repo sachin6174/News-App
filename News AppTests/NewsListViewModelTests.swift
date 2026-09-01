@@ -10,6 +10,10 @@ final class NewsListViewModelTests: XCTestCase {
         )
         let viewModel = NewsListViewModel(repository: repository)
         let loaded = expectation(description: "Fresh page appears")
+        // The ViewModel also notifies when the search query changes. XCTest treats
+        // a later second fulfillment as programmer misuse, so this expectation is
+        // deliberately interested only in whether loading happened at least once.
+        loaded.assertForOverFulfill = false
         viewModel.onChange = {
             if viewModel.allArticles.count == 2 { loaded.fulfill() }
         }
