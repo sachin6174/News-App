@@ -178,7 +178,7 @@ depend on a changing headline, a real key, or internet availability.
 
 ## CI, profiling, and release
 
-- `.github/workflows/ci.yml` runs tests, the Xcode static analyzer, secret scanning,
+- `.github/workflows/ci.yml` runs tests, the Xcode static analyzer, a tracked-source credential scan,
   and uploads the `.xcresult` bundle as accessibility/performance evidence.
 - [docs/INSTRUMENTS.md](docs/INSTRUMENTS.md) gives repeatable launch, scrolling,
   networking, allocations, and leak profiling steps plus a results table.

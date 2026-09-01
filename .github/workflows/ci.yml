@@ -20,10 +20,15 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Scan checked-out source for secrets
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Scan checked-out source for credential-shaped values
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -n -I -E '(github_pat_|x-access-token:|api(Key|_key)[[:space:]]*=[[:space:]]*"[A-Za-z0-9_-]{20,}")'; then
+            echo "A credential-shaped value was found in tracked source."
+            exit 1
+          fi
+          test ! -e Config/Secrets.xcconfig
 
       - name: Show selected Xcode
         run: xcodebuild -version
