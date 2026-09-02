@@ -32,6 +32,20 @@ and does not expose an API key.
 
 ![News App running in the iPhone 17 Pro simulator](NewsAppRunning.png)
 
+## Live API smoke test
+
+Commit `56aba31` was also built after a newly rotated key was supplied through
+the ignored `.env` workflow. The Debug app was installed and launched with no
+`--ui-testing` argument, so `AppEnvironment` selected `DefaultNewsRepository`
+instead of `FixtureNewsRepository`. The All feed then displayed NewsAPI stories
+from publishers including BBC News and Axios, together with their remote images.
+
+The key value was never printed or committed. The temporary `.env` and generated
+xcconfig copies were removed from the Mac checkout after the build; only the
+installed development app contains the requested embedded value.
+
+![Live NewsAPI feed running without fixture arguments](LiveNewsFeed.png)
+
 ## Performance result without résumé exaggeration
 
 `XCTApplicationLaunchMetric` produced five first-responsive-frame durations:
