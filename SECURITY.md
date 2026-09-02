@@ -1,6 +1,7 @@
 # Credential remediation
 
-The previously committed NewsAPI key must be treated as compromised.
+The previously committed NewsAPI key must still be treated as compromised even
+though it has now been removed from reachable public branch history.
 
 During this upgrade, the local `origin` URL was also found to contain a GitHub
 personal access token. The repository configuration has been changed back to the
@@ -12,7 +13,8 @@ use Git Credential Manager or SSH instead of embedding a token in a remote URL.
 
 1. Revoke the old key in the NewsAPI dashboard.
 2. Revoke the exposed GitHub personal access token.
-3. Generate a replacement NewsAPI key.
+3. A replacement NewsAPI key has been generated; keep it only in ignored local or
+   encrypted CI storage.
 4. Add the replacement to the ignored `.env` for local development, run
    `scripts/configure-local-env.sh`, or use a secret CI setting. Never commit the
    generated `Config/Secrets.xcconfig`.
@@ -22,17 +24,16 @@ use Git Credential Manager or SSH instead of embedding a token in a remote URL.
 Rotation is the security fix. History cleanup reduces accidental rediscovery, but
 cannot make a credential safe after somebody may have copied it.
 
-## Optional public-history cleanup
+## Completed public-history cleanup
 
-History rewriting changes commit IDs for every collaborator. Make a backup and
-coordinate before running it. Use `git-filter-repo` to replace the exact old token
-with a marker, verify with a secret scanner, then force-push using
-`--force-with-lease`. Do not paste the old value into a shell-history command;
-place the replacement rule in a temporary protected file instead.
+On 2 September 2026, `master` and `codex/news-app-2-production` were rewritten to
+remove the historical `News App/App/AppConstants.swift` path without copying its
+secret value into a command or replacement file. Both branches were force-pushed
+with leases tied to their inspected remote heads. A scan of every commit reachable
+from the rewritten branches found zero credential-shaped source values.
 
-After pushing, ask collaborators to make a fresh clone, clear cached forks where
-possible, and confirm GitHub secret scanning shows no active credential. The old
-key must remain revoked regardless of cleanup success.
+Existing collaborators must make a fresh clone, and cached forks may retain the
+old objects. The old key must remain revoked regardless of cleanup success.
 
 ## Reporting
 

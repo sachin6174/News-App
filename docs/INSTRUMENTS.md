@@ -52,9 +52,12 @@ images by design; continuous unbounded growth is not acceptable.
 
 ## Verified simulator result
 
-The branch was measured at commit `f08a9a57b8963a5ac0790d455062f9b8d0c713ba`
-with Xcode 26.6 on an Apple-silicon Mac and an iPhone 17 Pro simulator running
-iOS 26.5. Xcode 26.6 does not support the Network Connections or Animation
+The saved Instruments trace manifests were captured at rewritten commit
+`0c20f68a6edc489f99c897c1996485cb314eb594`; the complete XCTest metric suite was
+repeated on the unchanged application code at verified source commit
+`a54dbef7a5f647bdc7f337632fe467792b3987ad`. Both used Xcode 26.6 on an
+Apple-silicon Mac and an iPhone 17 Pro simulator running iOS 26.5. Xcode 26.6
+does not support the Network Connections or Animation
 Hitches instruments when directly targeting this simulator, so the repeatable
 script records the simulator's host processes with Time Profiler and Network.
 The app's own XCTest signpost metric supplies the scrolling regression number.
@@ -62,8 +65,8 @@ The app's own XCTest signpost metric supplies the scrolling regression number.
 | Evidence | Result |
 |---|---|
 | Full test suite | 17 passed, 0 failed, 0 skipped |
-| Repeat launch duration | Median 2.648 s; five samples; maximum 3.988 s |
-| Scroll drag/deceleration duration | Median 2.568 s across five measured gestures; this is duration, not a hitch count |
+| Repeat launch duration | Median 1.555 s; five samples; maximum 2.127 s |
+| Scroll drag/deceleration duration | Median 2.567 s across five measured gestures; this is duration, not a hitch count |
 | Memory footprint | 21.9 MiB captured; 22.8 MiB peak |
 | Leak scan | 0 leaks / 0 bytes reported; simulator security limited the scan to readable memory |
 | Static analyzer | Passed |

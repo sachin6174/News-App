@@ -6,7 +6,7 @@ commit below is yes—it built, launched, and passed every test that Xcode ran.
 
 ## Exact environment
 
-- Verified application commit: `f08a9a57b8963a5ac0790d455062f9b8d0c713ba`
+- Latest verified production commit: `a54dbef7a5f647bdc7f337632fe467792b3987ad`
 - Mac: Apple silicon, macOS 26.6.2 (25G83)
 - Xcode: 26.6 (17F113)
 - Simulator: iPhone 17 Pro, iOS 26.5 (23F77)
@@ -34,7 +34,7 @@ and does not expose an API key.
 
 ## Live API smoke test
 
-Commit `56aba31` was also built after a newly rotated key was supplied through
+Rewritten commit `69eacc7` was also built after a newly rotated key was supplied through
 the ignored `.env` workflow. The Debug app was installed and launched with no
 `--ui-testing` argument, so `AppEnvironment` selected `DefaultNewsRepository`
 instead of `FixtureNewsRepository`. The All feed then displayed NewsAPI stories
@@ -48,13 +48,14 @@ installed development app contains the requested embedded value.
 
 ## Performance result without résumé exaggeration
 
-`XCTApplicationLaunchMetric` produced five first-responsive-frame durations:
-2.626 s, 3.988 s, 2.939 s, 2.648 s, and 2.249 s. Their median is 2.648 s. With
+The latest clean-clone `XCTApplicationLaunchMetric` run produced five
+first-responsive-frame durations: 1.588 s, 1.308 s, 1.497 s, 2.127 s, and
+1.555 s. Their median is 1.555 s. With
 only five samples, the maximum is recorded instead of pretending it is a strong
 statistical p95.
 
-The scrolling signpost produced five drag/deceleration durations: 2.583 s,
-2.570 s, 2.568 s, 2.466 s, and 2.567 s. Their median is 2.568 s. This value is
+The scrolling signpost produced five drag/deceleration durations: 2.567 s,
+2.585 s, 2.567 s, 2.568 s, and 1.967 s. Their median is 2.567 s. This value is
 gesture duration, not a claim of “zero hitches.” The untouched source values are
 in [FullPerformanceMetrics.json](FullPerformanceMetrics.json).
 

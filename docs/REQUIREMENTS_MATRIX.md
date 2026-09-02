@@ -33,7 +33,7 @@ pretends that a workflow file equals an App Store delivery.
 | Deep links | Verified | `newsapp://article?url=...` validates an HTTPS destination and routes cold/warm launches into the SwiftUI detail screen; unit and XCUITests passed. |
 | Background refresh | Implemented | `BGAppRefreshTask` refreshes page one into the same Core Data cache and cancels when iOS expires the task. Scheduling time remains controlled by iOS. |
 | Remove SDWebImage mismatch | Verified | No package, pod, framework, import, or binary dependency remains; the app uses `CachedImageLoader` and accurately declares zero third-party runtime dependencies. |
-| Remove committed API key | Current tree verified; history cleanup required | Current tracked files contain no live key and `.env`/`Secrets.xcconfig` are ignored. The old `AppConstants.swift` blob remains in public Git history until the authorized history rewrite and remote force-push complete. |
+| Remove committed API key | Verified | Current tracked files contain no live key; `.env` and `Secrets.xcconfig` are ignored; both public branches were rewritten with lease-protected force pushes to remove every historical `AppConstants.swift` blob; the reachable-history scan returned zero credential-shaped findings. The provider key must still be revoked because history rewriting cannot invalidate copied secrets. |
 
 ## Saved verification
 

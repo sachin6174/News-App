@@ -23,11 +23,11 @@
   "environmentDescription" : "News App · Built with macOS 26.6.2",
   "expectedFailures" : 0,
   "failedTests" : 0,
-  "finishTime" : 1788305780.718,
+  "finishTime" : 1788334833.984,
   "passedTests" : 17,
   "result" : "Passed",
   "skippedTests" : 0,
-  "startTime" : 1788305602.047,
+  "startTime" : 1788334690.129,
   "statistics" : [
     {
       "subtitle" : "2 test runs",
@@ -39,7 +39,11 @@
   ],
   "title" : "Test - News App",
   "topInsights" : [
-
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "72% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 0.13s (three standard deviations)"
+    }
   ],
   "totalTestCount" : 17
 }

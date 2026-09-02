@@ -8,17 +8,22 @@ TestFlight delivery.
 The project intentionally has **zero third-party iOS runtime dependencies**. It
 uses Apple frameworks so every important behavior is visible in this repository.
 
-## First: rotate the exposed credential
+## Security cleanup status
 
-An older version committed a real NewsAPI key. Deleting the line from Swift does
-not make that key secret again because Git and public forks remember old commits.
+An older version committed a real NewsAPI key. On 2 September 2026, both public
+branches were rewritten with lease-protected force pushes to remove every
+historical `News App/App/AppConstants.swift` blob. A post-rewrite scan found zero
+credential-shaped values in either reachable branch history.
 
 1. Sign in to the NewsAPI account that owns the old key.
 2. Revoke it immediately.
 3. Create a replacement key.
 4. Never paste the replacement into a tracked file.
-5. If the repository is public, follow [SECURITY.md](SECURITY.md) to clean Git
-   history after making a backup. Rotation is still mandatory even after cleanup.
+5. Ask any existing collaborator to make a fresh clone because old commit IDs no
+   longer belong to the public branches.
+
+History removal reduces rediscovery; it cannot invalidate a key somebody may
+already have copied. Revocation is therefore still mandatory.
 
 The local Git `origin` also contained an embedded GitHub personal access token. It
 has been replaced with a credential-free HTTPS URL, but that GitHub token must be
