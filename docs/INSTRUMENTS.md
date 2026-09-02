@@ -77,8 +77,9 @@ The small review artifacts are in [evidence](evidence), including the
 [scrolling trace manifest](evidence/Scrolling-toc.xml),
 [network trace manifest](evidence/Networking-toc.xml), and
 [raw XCTest performance metrics](evidence/FullPerformanceMetrics.json). The
-large binary `.trace` packages remain in the temporary Mac verification checkout
-instead of bloating Git.
+large binary `.trace` and `.xcresult` packages are stored privately on the
+verification Mac at `~/Documents/News-App-Evidence-6aac0fc` with group/other
+permissions removed, instead of bloating Git.
 
 Run `scripts/collect-mac-instruments-evidence.sh` from the Mac checkout to repeat
 the simulator capture. A physical-device pass is still recommended before making

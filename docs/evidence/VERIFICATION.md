@@ -73,6 +73,11 @@ memory. Therefore this is useful regression evidence, not proof that every
 possible device-only leak is absent. A final physical-device Instruments pass
 is still appropriate before quoting device performance numbers.
 
+The 206 MiB raw Instruments and xcresult packages are retained privately on the
+verification Mac at `~/Documents/News-App-Evidence-6aac0fc`. Group and other
+permissions were removed. The temporary source clones containing pre-rewrite Git
+objects were deleted after the public-history verification succeeded.
+
 ## What still depends on private accounts
 
 Source implementation is complete, but no repository can manufacture these
