@@ -125,6 +125,3 @@ Temporary Items
 # Local credentials. Commit only the `.example` file, never the real values.
 Secrets.xcconfig
 .env
-News App.xcodeproj/project.xcworkspace/xcuserdata/sachinkumar.xcuserdatad/UserInterfaceState.xcuserstate
-News App.xcodeproj/project.xcworkspace/xcuserdata/sachinkumar.xcuserdatad/UserInterfaceState.xcuserstate
-News App.xcodeproj/project.xcworkspace/xcuserdata/sachinkumar.xcuserdatad/UserInterfaceState.xcuserstate

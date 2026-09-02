@@ -40,7 +40,14 @@ jobs:
         env:
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         run: |
+          set -euo pipefail
+          if [[ -z "$NEWS_API_KEY" || "$NEWS_API_KEY" == *[^A-Za-z0-9_-]* ]]; then
+            echo "NEWS_API_KEY is missing or has an unexpected format."
+            exit 1
+          fi
+          umask 077
           printf 'NEWS_API_KEY = %s\n' "$NEWS_API_KEY" > Config/Secrets.xcconfig
+          test "$(stat -f '%Lp' Config/Secrets.xcconfig)" = "600"
 
       - name: Archive and upload to TestFlight
         env:

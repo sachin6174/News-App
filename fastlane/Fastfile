@@ -15,7 +15,6 @@ platform :ios do
       scheme: "News App",
       clean: true,
       export_method: "app-store",
-      xcconfig: "Config/Secrets.xcconfig",
       export_options: {
         provisioningProfiles: {
           "in.sachinserver.News-App" => ENV.fetch("PROVISIONING_PROFILE_NAME")

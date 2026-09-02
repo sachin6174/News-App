@@ -5,6 +5,12 @@ a temporary signing keychain, writes the NewsAPI value to an ignored xcconfig,
 archives with Fastlane, uploads through the App Store Connect API, and deletes the
 temporary config. GitHub's macOS runner is ephemeral.
 
+`Config/Release.xcconfig` optionally includes that temporary file. The workflow
+rejects an empty or malformed key and gives the generated file owner-only `600`
+permissions before archiving. This makes the delivery path deterministic, but it
+does not make a provider key secret inside a shipped iOS binary. A commercial app
+should replace the direct provider call with a backend before public release.
+
 ## One-time Apple setup
 
 1. Create the app identifier `in.sachinserver.News-App` in the Apple Developer
