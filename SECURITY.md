@@ -13,8 +13,9 @@ use Git Credential Manager or SSH instead of embedding a token in a remote URL.
 1. Revoke the old key in the NewsAPI dashboard.
 2. Revoke the exposed GitHub personal access token.
 3. Generate a replacement NewsAPI key.
-4. Add the replacement only as `NEWS_API_KEY` in an Xcode environment variable or
-   secret CI setting.
+4. Add the replacement to the ignored `.env` for local development, run
+   `scripts/configure-local-env.sh`, or use a secret CI setting. Never commit the
+   generated `Config/Secrets.xcconfig`.
 5. Check `git status` before every commit. `Config/Secrets.xcconfig` must remain
    untracked.
 

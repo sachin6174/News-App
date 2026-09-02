@@ -31,15 +31,23 @@ build-setting placeholder. `.gitignore` blocks `Secrets.xcconfig` and `.env`.
 
 1. Open `News App.xcodeproj` in Xcode 16.4 or newer.
 2. Select the **News App** scheme and an iOS 17+ simulator.
-3. Open **Product → Scheme → Edit Scheme → Run → Arguments → Environment
-   Variables**.
-4. Add `NEWS_API_KEY` with the newly rotated key as its value.
-5. Run with **⌘R**.
+3. Copy `.env.example` to `.env` and place the newly rotated development key
+   after `NEWS_API_KEY=`. The real `.env` is ignored by Git.
+4. From Terminal in the repository, run
+   `./scripts/configure-local-env.sh`. It creates the ignored, owner-readable
+   `Config/Secrets.xcconfig` without printing the key.
+5. Run the Debug build with **⌘R**.
 
-The environment variable is best for local development. Release automation writes
-an untracked `Config/Secrets.xcconfig` only inside its temporary CI runner.
-`Config/Secrets.xcconfig.example` documents the expected name without containing a
-credential.
+An environment variable still overrides the file and is useful in CI. Release
+automation writes an untracked `Config/Secrets.xcconfig` only inside its temporary
+runner. `Config/Secrets.xcconfig.example` documents the expected shape without
+containing a credential.
+
+Important: `.env` keeps a key out of Git; it does not make a key secret after it
+is copied into an iOS application. Anyone can inspect an installed app bundle.
+Use this direct NewsAPI key only for development. A production release must call
+a backend that owns the provider key instead of embedding that provider key in
+the app.
 
 ## How the app works, in plain language
 

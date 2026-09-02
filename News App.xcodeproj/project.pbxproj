@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1100012F00000100000001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		693CD16F2E74B3C7005F39AF /* News App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693CD1882E74B3C9005F39AF /* News AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693CD1922E74B3C9005F39AF /* News AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,11 +89,20 @@
 		693CD1662E74B3C7005F39AF = {
 			isa = PBXGroup;
 			children = (
+				7A1100022F00000100000002 /* Config */,
 				693CD1712E74B3C7005F39AF /* News App */,
 				693CD18B2E74B3C9005F39AF /* News AppTests */,
 				693CD1952E74B3C9005F39AF /* News AppUITests */,
 				693CD1702E74B3C7005F39AF /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		7A1100022F00000100000002 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7A1100012F00000100000001 /* Debug.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		693CD1702E74B3C7005F39AF /* Products */ = {
@@ -287,6 +297,7 @@
 /* Begin XCBuildConfiguration section */
 		693CD19C2E74B3C9005F39AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A1100012F00000100000001 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,7 +315,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				NEWS_API_KEY = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "in.sachinserver.News-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
