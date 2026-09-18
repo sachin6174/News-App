@@ -32,10 +32,17 @@ actor FixtureNewsRepository: NewsRepository {
 
         let all = (1...32).map { number in
             Article(
-                source: Source(id: "fixture", name: "Test News"),
-                author: number.isMultiple(of: 2) ? "Sample Reporter" : nil,
-                title: number == 1 ? "Swift makes simple apps safer" : "Test headline \(number)",
-                description: "A stable local story used by automated tests.",
+                source: Source(id: "fixture", name: "Newsly Daily"),
+                author: number.isMultiple(of: 2) ? "Newsly Desk" : nil,
+                title: [
+                    "The stories shaping today’s conversation",
+                    "A practical guide to the week’s technology news",
+                    "What to watch across business, culture and sport",
+                    "Fresh perspectives from trusted publishers",
+                    "The big ideas worth reading today",
+                    "Your quick briefing for the day ahead"
+                ][(number - 1) % 6],
+                description: "Explore timely reporting from a range of publishers in one focused reading experience.",
                 url: "https://example.com/stories/\(number)",
                 urlToImage: nil,
                 publishedAt: "2026-01-01T12:00:00Z",

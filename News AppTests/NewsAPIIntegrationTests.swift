@@ -7,11 +7,11 @@ final class NewsAPIIntegrationTests: XCTestCase {
         super.tearDown()
     }
 
-    /// Exercises URL construction, token auth, HTTP handling, and Codable together.
-    func testRequestContainsPaginationAndTokenThenDecodesJSON() async throws {
+    /// Exercises URL construction, server-only credential boundaries, HTTP handling, and Codable together.
+    func testRequestContainsPaginationWithoutProviderTokenThenDecodesJSON() async throws {
         let session = makeStubbedSession()
         URLProtocolStub.handler = { request in
-            XCTAssertEqual(request.value(forHTTPHeaderField: "X-Api-Key"), "test-token")
+            XCTAssertNil(request.value(forHTTPHeaderField: "X-Api-Key"))
             let components = URLComponents(url: try XCTUnwrap(request.url), resolvingAgainstBaseURL: false)
             XCTAssertEqual(components?.queryItems?.first(where: { $0.name == "page" })?.value, "2")
             XCTAssertEqual(components?.queryItems?.first(where: { $0.name == "pageSize" })?.value, "10")
@@ -20,8 +20,7 @@ final class NewsAPIIntegrationTests: XCTestCase {
         let service = NewsAPIService(
             session: session,
             configuration: AppConfiguration(
-                newsBaseURL: URL(string: "https://example.com/news")!,
-                apiToken: "test-token"
+                newsBaseURL: URL(string: "https://example.com/news")!
             ),
             retryPolicy: RetryPolicy(maximumRetryCount: 0, baseDelayNanoseconds: 0)
         )
@@ -43,8 +42,7 @@ final class NewsAPIIntegrationTests: XCTestCase {
         let service = NewsAPIService(
             session: session,
             configuration: AppConfiguration(
-                newsBaseURL: URL(string: "https://example.com/news")!,
-                apiToken: "test-token"
+                newsBaseURL: URL(string: "https://example.com/news")!
             ),
             retryPolicy: RetryPolicy(maximumRetryCount: 1, baseDelayNanoseconds: 0)
         )
@@ -52,24 +50,6 @@ final class NewsAPIIntegrationTests: XCTestCase {
         _ = try await service.fetchHeadlines(page: 1, pageSize: 20)
 
         XCTAssertEqual(requestCount, 2)
-    }
-
-    /// Missing credentials fail before any request can accidentally leave device.
-    func testMissingTokenIsRejected() async {
-        let service = NewsAPIService(
-            session: makeStubbedSession(),
-            configuration: AppConfiguration(
-                newsBaseURL: URL(string: "https://example.com/news")!,
-                apiToken: ""
-            )
-        )
-
-        do {
-            _ = try await service.fetchHeadlines(page: 1, pageSize: 20)
-            XCTFail("A request without a token should not succeed.")
-        } catch {
-            XCTAssertEqual(error as? NetworkError, .missingToken)
-        }
     }
 
     /// Cancelling the parent Swift task must stop URLSession instead of showing a
@@ -80,8 +60,7 @@ final class NewsAPIIntegrationTests: XCTestCase {
         let service = NewsAPIService(
             session: URLSession(configuration: configuration),
             configuration: AppConfiguration(
-                newsBaseURL: URL(string: "https://example.com/news")!,
-                apiToken: "test-token"
+                newsBaseURL: URL(string: "https://example.com/news")!
             ),
             retryPolicy: RetryPolicy(maximumRetryCount: 0, baseDelayNanoseconds: 0)
         )

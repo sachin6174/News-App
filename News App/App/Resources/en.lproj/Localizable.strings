@@ -1,4 +1,4 @@
-"app.title" = "News";
+"app.title" = "Newsly";
 "segment.all" = "All";
 "segment.bookmarks" = "Bookmarks";
 "search.placeholder" = "Search articles";
@@ -24,7 +24,7 @@
 "source.cached" = "Cached";
 "error.title" = "Could Not Load News";
 "error.generic" = "Something went wrong. Please try again.";
-"error.missing.token" = "Add NEWS_API_KEY in your local Xcode scheme or build settings.";
+"error.missing.token" = "The headline service is not available right now. Please try again later.";
 "error.invalid.response" = "The server sent an invalid response.";
 "error.http.status" = "The news service returned status code %d.";
 "error.empty.data" = "The news service returned no data.";

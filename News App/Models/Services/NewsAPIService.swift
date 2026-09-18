@@ -57,16 +57,10 @@ final class NewsAPIService {
 
     /// Downloads and decodes one page of headlines.
     ///
-    /// The API key goes in a request header, not the URL. URLs are commonly kept
-    /// in browser history and server logs, so headers are the safer home for a
-    /// token. `URLSession.data(for:)` automatically cooperates with Swift Task
+    /// The app calls Newsly's service, which keeps its provider credential on the
+    /// server. `URLSession.data(for:)` automatically cooperates with Swift Task
     /// cancellation: cancelling the parent task also stops the network request.
     func fetchHeadlines(page: Int, pageSize: Int, category: Topic? = nil) async throws -> NewsResponse {
-        guard !configuration.apiToken.isEmpty,
-              configuration.apiToken != "$(NEWS_API_KEY)" else {
-            throw NetworkError.missingToken
-        }
-
         var queryItems = [
             URLQueryItem(name: "country", value: "us"),
             URLQueryItem(name: "page", value: String(page)),
@@ -92,7 +86,6 @@ final class NewsAPIService {
         request.httpMethod = "GET"
         request.timeoutInterval = 20
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue(configuration.apiToken, forHTTPHeaderField: "X-Api-Key")
 
         return try await perform(request, responseType: NewsResponse.self)
     }
