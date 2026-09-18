@@ -61,21 +61,28 @@ final class NewsAPIService {
     /// in browser history and server logs, so headers are the safer home for a
     /// token. `URLSession.data(for:)` automatically cooperates with Swift Task
     /// cancellation: cancelling the parent task also stops the network request.
-    func fetchHeadlines(page: Int, pageSize: Int) async throws -> NewsResponse {
+    func fetchHeadlines(page: Int, pageSize: Int, category: Topic? = nil) async throws -> NewsResponse {
         guard !configuration.apiToken.isEmpty,
               configuration.apiToken != "$(NEWS_API_KEY)" else {
             throw NetworkError.missingToken
+        }
+
+        var queryItems = [
+            URLQueryItem(name: "country", value: "us"),
+            URLQueryItem(name: "page", value: String(page)),
+            URLQueryItem(name: "pageSize", value: String(pageSize))
+        ]
+        // Only added when a topic is requested, so the default request shape
+        // (and every existing test that asserts on it) is completely unchanged.
+        if let category {
+            queryItems.append(URLQueryItem(name: "category", value: category.rawValue))
         }
 
         var components = URLComponents(
             url: configuration.newsBaseURL,
             resolvingAgainstBaseURL: false
         )
-        components?.queryItems = [
-            URLQueryItem(name: "country", value: "us"),
-            URLQueryItem(name: "page", value: String(page)),
-            URLQueryItem(name: "pageSize", value: String(pageSize))
-        ]
+        components?.queryItems = queryItems
 
         guard let url = components?.url else {
             throw NetworkError.invalidResponse

@@ -24,6 +24,12 @@ final class ProgrammaticSceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         self.newsController = newsController
 
+        // Lets a tapped breaking-news notification open the same SwiftUI detail
+        // screen a deep link would, reusing this controller's existing router.
+        NotificationScheduler.shared.onOpenArticle = { [weak newsController] deepLink in
+            newsController?.openDeepLink(deepLink)
+        }
+
         if let incomingURL = connectionOptions.urlContexts.first?.url {
             DispatchQueue.main.async { newsController.openDeepLink(incomingURL) }
         } else if let value = ProcessInfo.processInfo.environment["UITEST_DEEP_LINK"],

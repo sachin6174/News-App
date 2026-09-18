@@ -29,3 +29,21 @@
 "error.http.status" = "समाचार सेवा ने स्थिति कोड %d लौटाया।";
 "error.empty.data" = "समाचार सेवा से कोई डेटा नहीं मिला।";
 "error.decoding" = "समाचार डेटा का प्रारूप अपेक्षित नहीं था।";
+
+/* विषय, ब्रेकिंग-न्यूज़ अलर्ट और सुनें सुविधा (App Review सुधार हेतु जोड़ा गया) */
+"topic.business" = "व्यापार";
+"topic.entertainment" = "मनोरंजन";
+"topic.health" = "स्वास्थ्य";
+"topic.science" = "विज्ञान";
+"topic.sports" = "खेल";
+"topic.technology" = "तकनीक";
+"topics.title" = "विषय और सूचनाएं";
+"topics.section.follow" = "विषय फ़ॉलो करें";
+"topics.section.alerts" = "सूचनाएं";
+"topics.alerts.toggle" = "ब्रेकिंग न्यूज़ अलर्ट";
+"topics.alerts.footer" = "जब कोई नई मुख्य खबर आए तो सूचना पाएं। आप इसे यहां या सेटिंग्स में कभी भी बंद कर सकते हैं।";
+"topics.chip.top" = "मुख्य";
+"topics.chip.edit" = "संपादित करें";
+"notification.breaking.title" = "ब्रेकिंग न्यूज़";
+"action.listen" = "सुनें";
+"action.stop.listening" = "सुनना बंद करें";

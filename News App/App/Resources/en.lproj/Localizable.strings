@@ -29,3 +29,21 @@
 "error.http.status" = "The news service returned status code %d.";
 "error.empty.data" = "The news service returned no data.";
 "error.decoding" = "The news data had an unexpected format.";
+
+/* Topics, breaking-news alerts, and read-aloud (added for App Review remediation) */
+"topic.business" = "Business";
+"topic.entertainment" = "Entertainment";
+"topic.health" = "Health";
+"topic.science" = "Science";
+"topic.sports" = "Sports";
+"topic.technology" = "Technology";
+"topics.title" = "Topics & Alerts";
+"topics.section.follow" = "Follow Topics";
+"topics.section.alerts" = "Notifications";
+"topics.alerts.toggle" = "Breaking News Alerts";
+"topics.alerts.footer" = "Get notified when a new top story appears. You can turn this off anytime here, or in Settings.";
+"topics.chip.top" = "Top";
+"topics.chip.edit" = "Edit";
+"notification.breaking.title" = "Breaking News";
+"action.listen" = "Listen";
+"action.stop.listening" = "Stop Listening";

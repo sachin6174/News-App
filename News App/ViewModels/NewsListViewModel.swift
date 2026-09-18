@@ -22,6 +22,15 @@ final class NewsListViewModel {
     private(set) var state: State = .idle
     private(set) var isLoadingNextPage = false
 
+    /// Topics the reader follows, and — when one is selected — its own small,
+    /// unpaginated feed. These stay separate from `allArticles`/`state` above
+    /// so the general feed's tested pagination and offline-cache behaviour is
+    /// never touched by this feature.
+    private(set) var followedTopics: [Topic] = []
+    private(set) var selectedTopic: Topic?
+    private(set) var topicArticles: [Article] = []
+    private(set) var topicState: State = .idle
+
     var mode: Mode = .all {
         didSet { notifyChange() }
     }
@@ -33,19 +42,32 @@ final class NewsListViewModel {
     var onAnnouncement: ((String) -> Void)?
 
     private let repository: NewsRepository
+    private let topicPreferences: TopicPreferencesStore
     private let pageSize: Int
     private var currentPage = 0
     private var totalResults = Int.max
     private var loadTask: Task<Void, Never>?
+    private var topicLoadTask: Task<Void, Never>?
 
-    init(repository: NewsRepository = DefaultNewsRepository(), pageSize: Int = 20) {
+    init(
+        repository: NewsRepository = DefaultNewsRepository(),
+        topicPreferences: TopicPreferencesStore = .shared,
+        pageSize: Int = 20
+    ) {
         self.repository = repository
+        self.topicPreferences = topicPreferences
         self.pageSize = pageSize
     }
 
     /// The exact list the table should show after segment and search filtering.
     var displayedArticles: [Article] {
-        let base = mode == .all ? allArticles : bookmarkedArticles
+        let base: [Article]
+        switch mode {
+        case .bookmarks:
+            base = bookmarkedArticles
+        case .all:
+            base = selectedTopic == nil ? allArticles : topicArticles
+        }
         let query = filterText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !query.isEmpty else { return base }
 
@@ -54,6 +76,12 @@ final class NewsListViewModel {
                 || (article.description?.localizedCaseInsensitiveContains(query) ?? false)
                 || (article.source?.name.localizedCaseInsensitiveContains(query) ?? false)
         }
+    }
+
+    /// Which state the feed screen should render: the general feed's own state,
+    /// or the selected topic's — without disturbing either one's storage above.
+    var currentFeedState: State {
+        selectedTopic == nil ? state : topicState
     }
 
     /// Starts with the disk snapshot so repeat launches feel immediate, then asks
@@ -110,6 +138,8 @@ final class NewsListViewModel {
         loadTask?.cancel()
         loadTask = nil
         isLoadingNextPage = false
+        topicLoadTask?.cancel()
+        topicLoadTask = nil
     }
 
     /// Returns bookmark state in constant time using the already-loaded array.
@@ -143,6 +173,64 @@ final class NewsListViewModel {
     func loadBookmarks() async {
         bookmarkedArticles = await repository.bookmarks()
         notifyChange()
+    }
+
+    /// Reloads the followed-topics list from disk. Call after the Topics screen
+    /// changes it, and once during `start()` so the chip bar has data from the
+    /// very first render.
+    func refreshFollowedTopics() {
+        followedTopics = topicPreferences.followedTopics
+        notifyChange()
+    }
+
+    /// Follows or unfollows one topic and persists the change immediately.
+    func setTopic(_ topic: Topic, followed: Bool) {
+        topicPreferences.setFollowed(topic, followed: followed)
+        refreshFollowedTopics()
+        if !followed, selectedTopic == topic {
+            selectTopic(nil)
+        }
+    }
+
+    /// Switches which feed is showing. `nil` returns to the already-loaded
+    /// general feed; any `Topic` triggers its own single-page fetch.
+    func selectTopic(_ topic: Topic?) {
+        guard selectedTopic != topic else { return }
+        topicLoadTask?.cancel()
+        selectedTopic = topic
+        notifyChange()
+        guard let topic else { return }
+        loadTopic(topic)
+    }
+
+    /// Shows any cached copy of a topic immediately, then refreshes it live —
+    /// the same offline-first shape `start()` uses for the general feed.
+    private func loadTopic(_ topic: Topic) {
+        let cached = TopicArticleCache.shared.articles(for: topic)
+        topicArticles = cached
+        topicState = cached.isEmpty ? .loading : .content(isOffline: true)
+        notifyChange()
+
+        topicLoadTask = Task { [weak self] in
+            guard let self else { return }
+            do {
+                let articles = try await self.repository.fetchTopicHeadlines(topic)
+                guard !Task.isCancelled, self.selectedTopic == topic else { return }
+                self.topicArticles = articles
+                self.topicState = articles.isEmpty ? .empty : .content(isOffline: false)
+                self.notifyChange()
+            } catch is CancellationError {
+                // A newer topic switch already superseded this request.
+            } catch {
+                guard self.selectedTopic == topic else { return }
+                if self.topicArticles.isEmpty {
+                    self.topicState = .failed(message: error.localizedDescription)
+                } else {
+                    self.topicState = .content(isOffline: true)
+                }
+                self.notifyChange()
+            }
+        }
     }
 
     /// Performs one API page request and translates the result into screen state.

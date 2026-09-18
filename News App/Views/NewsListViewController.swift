@@ -19,6 +19,8 @@ final class NewsListViewController: UIViewController {
     private let retryButton = UIButton(type: .system)
     private let nextPageSpinner = UIActivityIndicatorView(style: .medium)
     private let searchController = UISearchController(searchResultsController: nil)
+    private let topicScrollView = UIScrollView()
+    private let topicStack = UIStackView()
 
     init(viewModel: NewsListViewModel) {
         self.viewModel = viewModel
@@ -36,6 +38,7 @@ final class NewsListViewController: UIViewController {
         configureViews()
         buildHierarchyAndConstraints()
         bindViewModel()
+        viewModel.refreshFollowedTopics()
         viewModel.start()
     }
 
@@ -73,6 +76,12 @@ final class NewsListViewController: UIViewController {
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.accessibilityIdentifier = "news.segment"
         segmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+
+        topicScrollView.showsHorizontalScrollIndicator = false
+        topicScrollView.accessibilityIdentifier = "news.topicBar"
+        topicStack.axis = .horizontal
+        topicStack.alignment = .fill
+        topicStack.spacing = 8
 
         offlineLabel.text = L10n.text("state.offline")
         offlineLabel.font = .preferredFont(forTextStyle: .caption1)
@@ -129,10 +138,12 @@ final class NewsListViewController: UIViewController {
 
     /// Adds every view and describes its position with programmatic Auto Layout.
     private func buildHierarchyAndConstraints() {
-        [segmentedControl, offlineLabel, tableView, stateStack].forEach {
+        [segmentedControl, offlineLabel, topicScrollView, tableView, stateStack].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
+        topicStack.translatesAutoresizingMaskIntoConstraints = false
+        topicScrollView.addSubview(topicStack)
 
         NSLayoutConstraint.activate([
             segmentedControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
@@ -144,7 +155,17 @@ final class NewsListViewController: UIViewController {
             offlineLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             offlineLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 28),
 
-            tableView.topAnchor.constraint(equalTo: offlineLabel.bottomAnchor),
+            topicScrollView.topAnchor.constraint(equalTo: offlineLabel.bottomAnchor, constant: 4),
+            topicScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topicScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topicScrollView.heightAnchor.constraint(equalToConstant: 44),
+
+            topicStack.topAnchor.constraint(equalTo: topicScrollView.topAnchor),
+            topicStack.bottomAnchor.constraint(equalTo: topicScrollView.bottomAnchor),
+            topicStack.leadingAnchor.constraint(equalTo: topicScrollView.leadingAnchor, constant: 16),
+            topicStack.trailingAnchor.constraint(equalTo: topicScrollView.trailingAnchor, constant: -16),
+
+            tableView.topAnchor.constraint(equalTo: topicScrollView.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -175,6 +196,7 @@ final class NewsListViewController: UIViewController {
         retryButton.isHidden = true
         stateTitleLabel.text = nil
         stateMessageLabel.text = nil
+        updateTopicBar()
 
         // Bookmarks are useful even when the live feed is loading or has failed.
         // Their rows come from a separate Core Data shelf, so the feed's network
@@ -191,7 +213,7 @@ final class NewsListViewController: UIViewController {
             return
         }
 
-        switch viewModel.state {
+        switch viewModel.currentFeedState {
         case .idle, .loading:
             stateStack.isHidden = false
             tableView.isHidden = true
@@ -219,7 +241,9 @@ final class NewsListViewController: UIViewController {
             retryButton.isHidden = false
         }
 
-        if viewModel.isLoadingNextPage {
+        // Topic feeds fetch a single unpaginated page, so the "load more"
+        // footer only ever applies to the general feed.
+        if viewModel.selectedTopic == nil, viewModel.isLoadingNextPage {
             nextPageSpinner.startAnimating()
             nextPageSpinner.frame.size.height = 52
             tableView.tableFooterView = nextPageSpinner
@@ -242,6 +266,70 @@ final class NewsListViewController: UIViewController {
     /// The error button repeats the same safe first-page request.
     @objc private func retryTapped() {
         viewModel.retry()
+    }
+
+    /// Rebuilds the horizontal topic chips from the latest followed-topics list
+    /// and highlights whichever one is active. Hidden entirely in Bookmarks
+    /// mode, where a topic filter would not mean anything.
+    private func updateTopicBar() {
+        let shouldShow = viewModel.mode == .all
+        topicScrollView.isHidden = !shouldShow
+        guard shouldShow else { return }
+
+        topicStack.arrangedSubviews.forEach {
+            topicStack.removeArrangedSubview($0)
+            $0.removeFromSuperview()
+        }
+
+        let topChip = makeTopicChip(
+            title: L10n.text("topics.chip.top"),
+            isSelected: viewModel.selectedTopic == nil
+        )
+        topChip.accessibilityIdentifier = "topic.chip.top"
+        topChip.addAction(UIAction { [weak self] _ in self?.viewModel.selectTopic(nil) }, for: .touchUpInside)
+        topicStack.addArrangedSubview(topChip)
+
+        for topic in viewModel.followedTopics {
+            let chip = makeTopicChip(title: topic.displayName, isSelected: viewModel.selectedTopic == topic)
+            chip.accessibilityIdentifier = "topic.chip.\(topic.rawValue)"
+            chip.addAction(UIAction { [weak self] _ in self?.viewModel.selectTopic(topic) }, for: .touchUpInside)
+            topicStack.addArrangedSubview(chip)
+        }
+
+        let editChip = makeTopicChip(title: L10n.text("topics.chip.edit"), isSelected: false)
+        editChip.accessibilityIdentifier = "news.editTopics"
+        editChip.addAction(UIAction { [weak self] _ in self?.presentTopicsEditor() }, for: .touchUpInside)
+        topicStack.addArrangedSubview(editChip)
+    }
+
+    /// Builds one rounded, Dynamic-Type-aware chip with a guaranteed 44-point
+    /// minimum tap target, matching the bookmark button's own minimum elsewhere
+    /// in this app.
+    private func makeTopicChip(title: String, isSelected: Bool) -> UIButton {
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = title
+        configuration.baseBackgroundColor = isSelected ? .label : .secondarySystemBackground
+        configuration.baseForegroundColor = isSelected ? .systemBackground : .label
+        configuration.cornerStyle = .capsule
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 14, bottom: 8, trailing: 14)
+        configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var outgoing = incoming
+            outgoing.font = .preferredFont(forTextStyle: .footnote)
+            return outgoing
+        }
+
+        let button = UIButton(configuration: configuration)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+        button.accessibilityTraits = isSelected ? [.button, .selected] : .button
+        return button
+    }
+
+    /// Presents the topic follow/unfollow and breaking-news-alerts screen.
+    private func presentTopicsEditor() {
+        let topics = TopicsViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: topics)
+        present(navigation, animated: true)
     }
 
     /// Pushes a SwiftUI screen inside the existing UIKit navigation controller.
