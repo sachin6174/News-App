@@ -32,6 +32,37 @@ revoked because removing it locally cannot invalidate an already exposed token.
 This repository now reads `NEWS_API_KEY` at runtime and contains only an empty
 build-setting placeholder. `.gitignore` blocks `Secrets.xcconfig` and `.env`.
 
+## App Store review remediation (September 2026)
+
+Submission `55302a14-e3c6-4fee-954e-8b1ec7096112` (build `2026091101`) was
+rejected under **Guideline 4.2.2 — Design — Minimum Functionality**: reviewed
+as "limited or no native functionality" beyond browsing headlines aggregated
+from the internet. That verdict is about the user-facing experience, not the
+code underneath it — the app already had an offline-first cache, background
+refresh, and bookmarks, but nothing a reviewer could point to as native
+functionality a web page could not offer.
+
+In response, this branch adds:
+
+- **Personalized topics ("For You")** — readers follow specific categories
+  (Business, Technology, Sports, and more) from a new Topics screen; the main
+  feed gets a topic bar to switch between followed topics and the general
+  feed, each with its own offline snapshot.
+- **Breaking-news alerts** — an opt-in local notification when a new top
+  story appears, routed through the same deep-link path a shared link uses.
+- **Listen to articles** — on-device text-to-speech playback of the headline
+  and summary from the article screen.
+- **A Home Screen widget** — source is written and ready under
+  [`NewslyWidget/`](NewslyWidget); wiring it into a second Xcode target is a
+  short manual step documented in [docs/WIDGET_SETUP.md](docs/WIDGET_SETUP.md).
+
+See [docs/REQUIREMENTS_MATRIX.md](docs/REQUIREMENTS_MATRIX.md) for the same
+"Implemented" vs. "Verified" honesty this project applies everywhere else —
+these rows are marked **Implemented — not yet Mac-verified** until they are
+actually built and exercised in Xcode. A draft reply for App Store Connect's
+Resolution Center is at
+[docs/APP_REVIEW_RESPONSE.md](docs/APP_REVIEW_RESPONSE.md).
+
 ## Run the app
 
 1. Open `News App.xcodeproj` in Xcode 16.4 or newer.
@@ -162,6 +193,52 @@ newsapp://article?url=https%3A%2F%2Fexample.com%2Fstory
 The scene delegate handles both cold and warm launches. `BGAppRefreshTask` asks iOS
 for a future page-one refresh, updates the same Core Data cache, and cancels work if
 the system's time expires. iOS intentionally decides the actual execution time.
+
+## Personalization, breaking-news alerts, and read-aloud
+
+**Topics.** `Topic` is a small enum mirroring NewsAPI's own categories
+(business, entertainment, health, science, sports, technology — `general` is
+left out since the default "Top" feed already covers it). `TopicPreferencesStore`
+persists which topics a reader follows in `UserDefaults`; `TopicArticleCache`
+keeps a small offline JSON snapshot per topic. Both stay outside Core Data on
+purpose, so the tested cache/bookmark schema in `DataStoreManager` never has
+to change for this feature. `NewsListViewModel` keeps a topic's feed
+(`topicArticles`/`topicState`) completely separate from the general feed's own
+`allArticles`/`state`/pagination, so selecting a topic can never disturb the
+general feed's tested behaviour.
+
+**Breaking-news alerts.** `NotificationScheduler` wraps local (on-device)
+`UNUserNotificationCenter` alerts — nothing here calls a push server.
+`BreakingNewsNotifier` compares the newest page-one headline against the last
+one the reader was told about (skipping the very first comparison, so
+installing the app or turning alerts on never fires a notification for
+whatever headline already happened to be on top) and asks
+`NotificationScheduler` to post an alert only for a genuinely new story. This
+runs from the one place both a foreground refresh and
+`BackgroundRefreshManager` already share:
+`DefaultNewsRepository.fetchHeadlines(page: 1, ...)`. Tapping a notification
+reuses `DeepLinkRouter`'s existing, already-tested `newsapp://article?url=`
+route — the same one a shared link uses. The feature defaults to off and only
+requests permission when the reader turns it on from the Topics screen.
+
+**Listen to articles.** `ArticleSpeechController` wraps `AVSpeechSynthesizer`
+behind a small `ObservableObject` so `ArticleDetailView` can drive a
+play/stop control with `@StateObject`. Playback stops automatically when the
+detail screen disappears.
+
+**Widget.** `WidgetDataWriter` (app target) mirrors the top few headlines
+into an App Group–shared `UserDefaults` suite after every successful page-one
+fetch and nudges `WidgetCenter` to refresh. It is written to no-op safely
+before the App Group capability exists, so it shipped with the rest of this
+change without requiring the widget extension target to exist yet. The
+widget extension's own source lives under [`NewslyWidget/`](NewslyWidget);
+see [docs/WIDGET_SETUP.md](docs/WIDGET_SETUP.md) to wire it into a second
+Xcode target.
+
+None of this was built or run from the environment that wrote it — only
+written and reviewed as source. Build, run, and exercise it in Xcode before
+relying on it, the same rule this project already applies to every claim in
+[docs/REQUIREMENTS_MATRIX.md](docs/REQUIREMENTS_MATRIX.md).
 
 ## Tests
 

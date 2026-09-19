@@ -15,4 +15,15 @@ enum DeepLinkRouter {
         }
         return articleURL
     }
+
+    /// The inverse of `articleURL(from:)`: builds the app's own deep link for a
+    /// known HTTPS article URL, so a local notification or a widget tap can
+    /// reuse this exact, already-tested routing path instead of a second one.
+    static func appLink(forArticleURL articleURL: URL) -> URL? {
+        var components = URLComponents()
+        components.scheme = "newsapp"
+        components.host = "article"
+        components.queryItems = [URLQueryItem(name: "url", value: articleURL.absoluteString)]
+        return components.url
+    }
 }

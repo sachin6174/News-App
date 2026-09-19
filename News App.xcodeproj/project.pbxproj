@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1AC92C61305FE57CFD945DDC /* NewslyWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BCEA33316DA726057C62D /* NewslyWidgetProvider.swift */; };
+		709E32486220EFC679B45A3B /* NewslyWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9CB18DD934426AB38905A680 /* NewslyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AB43469218CEB645DAC76 /* NewslyWidget.swift */; };
+		AF1C66C9C5B9A9AAD3865BEB /* NewslyWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F4F52DD921C332029A6EF /* NewslyWidgetEntryView.swift */; };
+		C2E79719E5FD61C998644363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914443C0294268774E0C250D /* Foundation.framework */; };
+		C6B3C1849311D0DDB93DA231 /* NewslyWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134BB8A1836464CD361B5ACB /* NewslyWidgetEntry.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		693CD1892E74B3C9005F39AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,14 +30,41 @@
 			remoteGlobalIDString = 693CD16E2E74B3C7005F39AF;
 			remoteInfo = "News App";
 		};
+		BEA92EF0E96B22EE0C9AF7DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 693CD1672E74B3C7005F39AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 811B90683BED0D0D66093169;
+			remoteInfo = NewslyWidget;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FEFF8E525E5DE9FB0F19C9CA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				709E32486220EFC679B45A3B /* NewslyWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		7A1100012F00000100000001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		7A1100032F00000100000003 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		134BB8A1836464CD361B5ACB /* NewslyWidgetEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewslyWidgetEntry.swift; sourceTree = "<group>"; };
 		693CD16F2E74B3C7005F39AF /* News App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693CD1882E74B3C9005F39AF /* News AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693CD1922E74B3C9005F39AF /* News AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1100012F00000100000001 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		7A1100032F00000100000003 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NewslyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		914443C0294268774E0C250D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		987AB43469218CEB645DAC76 /* NewslyWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewslyWidget.swift; sourceTree = "<group>"; };
+		B86BCEA33316DA726057C62D /* NewslyWidgetProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewslyWidgetProvider.swift; sourceTree = "<group>"; };
+		F49F4F52DD921C332029A6EF /* NewslyWidgetEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NewslyWidgetEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -52,11 +88,15 @@
 		};
 		693CD18B2E74B3C9005F39AF /* News AppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = "News AppTests";
 			sourceTree = "<group>";
 		};
 		693CD1952E74B3C9005F39AF /* News AppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = "News AppUITests";
 			sourceTree = "<group>";
 		};
@@ -84,6 +124,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A919551F42F08F1695C6EA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E79719E5FD61C998644363 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +143,28 @@
 				693CD18B2E74B3C9005F39AF /* News AppTests */,
 				693CD1952E74B3C9005F39AF /* News AppUITests */,
 				693CD1702E74B3C7005F39AF /* Products */,
+				6E830B05EB8038237DD01A33 /* Frameworks */,
+				7EAD5C8A9BD979D617E4B21D /* NewslyWidget */,
 			);
+			sourceTree = "<group>";
+		};
+		693CD1702E74B3C7005F39AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				693CD16F2E74B3C7005F39AF /* News App.app */,
+				693CD1882E74B3C9005F39AF /* News AppTests.xctest */,
+				693CD1922E74B3C9005F39AF /* News AppUITests.xctest */,
+				8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E830B05EB8038237DD01A33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93BE10AAE73A87B0138FA07C /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7A1100022F00000100000002 /* Config */ = {
@@ -107,14 +176,24 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		693CD1702E74B3C7005F39AF /* Products */ = {
+		7EAD5C8A9BD979D617E4B21D /* NewslyWidget */ = {
 			isa = PBXGroup;
 			children = (
-				693CD16F2E74B3C7005F39AF /* News App.app */,
-				693CD1882E74B3C9005F39AF /* News AppTests.xctest */,
-				693CD1922E74B3C9005F39AF /* News AppUITests.xctest */,
+				987AB43469218CEB645DAC76 /* NewslyWidget.swift */,
+				134BB8A1836464CD361B5ACB /* NewslyWidgetEntry.swift */,
+				F49F4F52DD921C332029A6EF /* NewslyWidgetEntryView.swift */,
+				B86BCEA33316DA726057C62D /* NewslyWidgetProvider.swift */,
 			);
-			name = Products;
+			name = NewslyWidget;
+			path = NewslyWidget;
+			sourceTree = "<group>";
+		};
+		93BE10AAE73A87B0138FA07C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				914443C0294268774E0C250D /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,17 +206,17 @@
 				693CD16B2E74B3C7005F39AF /* Sources */,
 				693CD16C2E74B3C7005F39AF /* Frameworks */,
 				693CD16D2E74B3C7005F39AF /* Resources */,
+				FEFF8E525E5DE9FB0F19C9CA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7D1222320BD70D98C8F7C8EA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				693CD1712E74B3C7005F39AF /* News App */,
 			);
 			name = "News App";
-			packageProductDependencies = (
-			);
 			productName = "News App";
 			productReference = 693CD16F2E74B3C7005F39AF /* News App.app */;
 			productType = "com.apple.product-type.application";
@@ -159,8 +238,6 @@
 				693CD18B2E74B3C9005F39AF /* News AppTests */,
 			);
 			name = "News AppTests";
-			packageProductDependencies = (
-			);
 			productName = "News AppTests";
 			productReference = 693CD1882E74B3C9005F39AF /* News AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -182,11 +259,26 @@
 				693CD1952E74B3C9005F39AF /* News AppUITests */,
 			);
 			name = "News AppUITests";
-			packageProductDependencies = (
-			);
 			productName = "News AppUITests";
 			productReference = 693CD1922E74B3C9005F39AF /* News AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		811B90683BED0D0D66093169 /* NewslyWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B253E95BBCAED8B9AD99D2 /* Build configuration list for PBXNativeTarget "NewslyWidget" */;
+			buildPhases = (
+				A1DFA93ACF285F2F47FBCB9F /* Sources */,
+				A919551F42F08F1695C6EA91 /* Frameworks */,
+				E1371497DBFB07E969D50FEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NewslyWidget;
+			productName = NewslyWidget;
+			productReference = 8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -221,8 +313,6 @@
 			);
 			mainGroup = 693CD1662E74B3C7005F39AF;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 693CD1702E74B3C7005F39AF /* Products */;
 			projectDirPath = "";
@@ -231,6 +321,7 @@
 				693CD16E2E74B3C7005F39AF /* News App */,
 				693CD1872E74B3C9005F39AF /* News AppTests */,
 				693CD1912E74B3C9005F39AF /* News AppUITests */,
+				811B90683BED0D0D66093169 /* NewslyWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +342,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		693CD1902E74B3C9005F39AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1371497DBFB07E969D50FEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +379,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1DFA93ACF285F2F47FBCB9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB18DD934426AB38905A680 /* NewslyWidget.swift in Sources */,
+				C6B3C1849311D0DDB93DA231 /* NewslyWidgetEntry.swift in Sources */,
+				AF1C66C9C5B9A9AAD3865BEB /* NewslyWidgetEntryView.swift in Sources */,
+				1AC92C61305FE57CFD945DDC /* NewslyWidgetProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -294,9 +403,58 @@
 			target = 693CD16E2E74B3C7005F39AF /* News App */;
 			targetProxy = 693CD1932E74B3C9005F39AF /* PBXContainerItemProxy */;
 		};
+		7D1222320BD70D98C8F7C8EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NewslyWidget;
+			target = 811B90683BED0D0D66093169 /* NewslyWidget */;
+			targetProxy = BEA92EF0E96B22EE0C9AF7DA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		18E72FE575027702FE025EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewslyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "in.sachinserver.News-App.NewslyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42B2FFF39979704CFF0D534E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = NewslyWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "in.sachinserver.News-App.NewslyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		693CD19C2E74B3C9005F39AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A1100012F00000100000001 /* Debug.xcconfig */;
@@ -305,7 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QA7BM7NDFK;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "News App/App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -333,7 +491,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QA7BM7NDFK;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "News App/App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -388,7 +546,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = QA7BM7NDFK;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -452,7 +610,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = QA7BM7NDFK;
+				DEVELOPMENT_TEAM = M5Q7N9D29M;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -585,8 +743,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		85B253E95BBCAED8B9AD99D2 /* Build configuration list for PBXNativeTarget "NewslyWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E72FE575027702FE025EA1 /* Release */,
+				42B2FFF39979704CFF0D534E /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = 693CD1672E74B3C7005F39AF /* Project object */;
 }

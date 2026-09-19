@@ -8,6 +8,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         BackgroundRefreshManager.shared.register()
+        NotificationScheduler.shared.configure()
         return true
     }
 

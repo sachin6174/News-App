@@ -10,6 +10,7 @@ struct ArticleDetailView: View {
 
     @State private var isBookmarked: Bool
     @State private var image: UIImage?
+    @StateObject private var speechController = ArticleSpeechController()
 
     init(
         article: Article,
@@ -45,6 +46,7 @@ struct ArticleDetailView: View {
                     .font(.body)
 
                 bookmarkButton
+                listenButton
 
                 if let url = URL(string: article.url), !article.url.isEmpty {
                     Link(destination: url) {
@@ -61,6 +63,9 @@ struct ArticleDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .task {
             image = await CachedImageLoader.shared.image(for: article.urlToImage)
+        }
+        .onDisappear {
+            speechController.stop()
         }
     }
 
@@ -100,5 +105,21 @@ struct ArticleDetailView: View {
         }
         .buttonStyle(.bordered)
         .accessibilityIdentifier("detail.bookmark")
+    }
+
+    /// Reads the headline and description aloud with `AVSpeechSynthesizer`, or
+    /// stops if already speaking.
+    private var listenButton: some View {
+        Button {
+            speechController.toggle(title: article.title, body: article.description ?? "")
+        } label: {
+            Label(
+                L10n.text(speechController.isSpeaking ? "action.stop.listening" : "action.listen"),
+                systemImage: speechController.isSpeaking ? "stop.circle" : "speaker.wave.2"
+            )
+            .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.bordered)
+        .accessibilityIdentifier("detail.listen")
     }
 }

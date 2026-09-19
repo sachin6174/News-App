@@ -125,3 +125,4 @@ Temporary Items
 # Local credentials. Commit only the `.example` file, never the real values.
 Secrets.xcconfig
 .env
+.gstack/
