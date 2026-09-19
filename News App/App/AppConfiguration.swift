@@ -14,7 +14,7 @@ struct AppConfiguration: Sendable {
     /// public, purpose-built endpoint.
     static func live() -> AppConfiguration {
         AppConfiguration(
-            newsBaseURL: URL(string: "https://newsly-live-headlines.sachin332883.chatgpt.site/api/top-headlines")!
+            newsBaseURL: URL(string: "https://sachinserver.in/api/news/top-headlines")!
         )
     }
 
