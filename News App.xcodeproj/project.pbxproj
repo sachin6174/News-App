@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1AC92C61305FE57CFD945DDC /* NewslyWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BCEA33316DA726057C62D /* NewslyWidgetProvider.swift */; };
-		709E32486220EFC679B45A3B /* NewslyWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CB18DD934426AB38905A680 /* NewslyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AB43469218CEB645DAC76 /* NewslyWidget.swift */; };
 		AF1C66C9C5B9A9AAD3865BEB /* NewslyWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F4F52DD921C332029A6EF /* NewslyWidgetEntryView.swift */; };
 		C2E79719E5FD61C998644363 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914443C0294268774E0C250D /* Foundation.framework */; };
@@ -30,13 +29,6 @@
 			remoteGlobalIDString = 693CD16E2E74B3C7005F39AF;
 			remoteInfo = "News App";
 		};
-		BEA92EF0E96B22EE0C9AF7DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 693CD1672E74B3C7005F39AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 811B90683BED0D0D66093169;
-			remoteInfo = NewslyWidget;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				709E32486220EFC679B45A3B /* NewslyWidget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,14 +115,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A919551F42F08F1695C6EA91 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2E79719E5FD61C998644363 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,7 +127,6 @@
 				693CD1952E74B3C9005F39AF /* News AppUITests */,
 				693CD1702E74B3C7005F39AF /* Products */,
 				6E830B05EB8038237DD01A33 /* Frameworks */,
-				7EAD5C8A9BD979D617E4B21D /* NewslyWidget */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,18 +158,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		7EAD5C8A9BD979D617E4B21D /* NewslyWidget */ = {
-			isa = PBXGroup;
-			children = (
-				987AB43469218CEB645DAC76 /* NewslyWidget.swift */,
-				134BB8A1836464CD361B5ACB /* NewslyWidgetEntry.swift */,
-				F49F4F52DD921C332029A6EF /* NewslyWidgetEntryView.swift */,
-				B86BCEA33316DA726057C62D /* NewslyWidgetProvider.swift */,
-			);
-			name = NewslyWidget;
-			path = NewslyWidget;
-			sourceTree = "<group>";
-		};
 		93BE10AAE73A87B0138FA07C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +181,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D1222320BD70D98C8F7C8EA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				693CD1712E74B3C7005F39AF /* News App */,
@@ -263,23 +232,6 @@
 			productReference = 693CD1922E74B3C9005F39AF /* News AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		811B90683BED0D0D66093169 /* NewslyWidget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 85B253E95BBCAED8B9AD99D2 /* Build configuration list for PBXNativeTarget "NewslyWidget" */;
-			buildPhases = (
-				A1DFA93ACF285F2F47FBCB9F /* Sources */,
-				A919551F42F08F1695C6EA91 /* Frameworks */,
-				E1371497DBFB07E969D50FEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NewslyWidget;
-			productName = NewslyWidget;
-			productReference = 8EDE788F3C48B438B03AF71C /* NewslyWidget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -321,7 +273,6 @@
 				693CD16E2E74B3C7005F39AF /* News App */,
 				693CD1872E74B3C9005F39AF /* News AppTests */,
 				693CD1912E74B3C9005F39AF /* News AppUITests */,
-				811B90683BED0D0D66093169 /* NewslyWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -342,13 +293,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		693CD1902E74B3C9005F39AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1371497DBFB07E969D50FEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,17 +323,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1DFA93ACF285F2F47FBCB9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CB18DD934426AB38905A680 /* NewslyWidget.swift in Sources */,
-				C6B3C1849311D0DDB93DA231 /* NewslyWidgetEntry.swift in Sources */,
-				AF1C66C9C5B9A9AAD3865BEB /* NewslyWidgetEntryView.swift in Sources */,
-				1AC92C61305FE57CFD945DDC /* NewslyWidgetProvider.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -402,12 +335,6 @@
 			isa = PBXTargetDependency;
 			target = 693CD16E2E74B3C7005F39AF /* News App */;
 			targetProxy = 693CD1932E74B3C9005F39AF /* PBXContainerItemProxy */;
-		};
-		7D1222320BD70D98C8F7C8EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NewslyWidget;
-			target = 811B90683BED0D0D66093169 /* NewslyWidget */;
-			targetProxy = BEA92EF0E96B22EE0C9AF7DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -739,15 +666,6 @@
 			buildConfigurations = (
 				693CD1A42E74B3C9005F39AF /* Debug */,
 				693CD1A52E74B3C9005F39AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		85B253E95BBCAED8B9AD99D2 /* Build configuration list for PBXNativeTarget "NewslyWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				18E72FE575027702FE025EA1 /* Release */,
-				42B2FFF39979704CFF0D534E /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
