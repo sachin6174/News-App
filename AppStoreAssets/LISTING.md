@@ -1,7 +1,36 @@
 # App Store listing — Newsly 1.0
 
-Paste-ready copy for App Store Connect. Everything here describes what build 1
-actually does. Nothing mentions the Home Screen widget: it is not in this build.
+Paste-ready copy for App Store Connect (app ID `6810530638`). Everything here
+describes what build 1 actually does. Nothing mentions the Home Screen widget:
+it is not in this build.
+
+> This is a **resubmission**. Version 1.0 was rejected under Guideline 4.2.2
+> (Minimum Functionality), submission `55302a14-e3c6-4fee-954e-8b1ec7096112`.
+
+---
+
+## ⚠️ Fix these two first — each one is its own rejection
+
+Read off the live version page on 19 September:
+
+**1. Support URL and Marketing URL point at a dead host.**
+
+```
+currently: https://newsly-live-headlines.sachin332883.chatgpt.site/support
+currently: https://newsly-live-headlines.sachin332883.chatgpt.site
+```
+
+That sandbox host returns **503**. App Review opens the support URL, finds
+nothing, and rejects. Change both to:
+
+```
+https://sachinserver.in
+```
+
+**2. "Sign-in required" is ticked in App Review Information.**
+
+Newsly has no account and no login. Leaving this ticked tells the reviewer to
+look for credentials that do not exist. **Untick it.**
 
 ---
 
@@ -108,21 +137,34 @@ Build 1 has no analytics SDK, no accounts, and no third-party tracking. Bookmark
 topic preferences are stored on device. The app calls one backend endpoint on
 sachinserver.in, which proxies NewsAPI and does not attach a user identifier.
 
-## What to tell App Review (Notes)
+## What to tell App Review (Notes field)
+
+This one matters more than usual: it is what answers the 4.2.2 rejection.
 
 ```
-Newsly is a news reader. No account or login is needed — launch the app and the
+Newsly is a news reader. No account or login is required - launch the app and
 current top headlines load immediately.
 
-To review the main flows:
-• The feed loads on launch. Tap a topic chip (Technology, Business and so on) to
-  filter, or "Top" for the general feed.
-• Tap any story to open the detail view, where the bookmark and "listen to article"
-  controls are.
-• The Bookmarks tab holds saved stories and works without a connection.
+To review the functionality added since the previous submission (Guideline 4.2.2):
 
-Headlines come from NewsAPI via a backend service at sachinserver.in. The API
-credential is held server-side and is not present in the app binary.
+1. TOPICS - the feed has a topic bar across the top. Tap Technology, Business,
+   Health, Science, Sports or Entertainment to switch the feed to that topic, or
+   "Edit" to choose which topics you follow. Each topic keeps its own offline copy.
+
+2. LISTEN TO ARTICLE - tap any story to open the detail view. The Listen control
+   reads the headline and summary aloud using on-device speech synthesis.
+
+3. BREAKING NEWS ALERTS - the app asks permission for notifications on first
+   launch. When a new top story appears it posts a local notification; tapping it
+   opens that story.
+
+Also available: bookmarking for offline reading (Bookmarks tab), search across
+loaded headlines, VoiceOver and Dynamic Type support, and English/Hindi
+localization.
+
+Headlines come from NewsAPI through a service on our own server at
+sachinserver.in. The provider credential is held server-side and is not present
+in the app binary.
 ```
 
 ---
